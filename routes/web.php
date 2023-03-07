@@ -19,7 +19,8 @@ use App\Http\Controllers\SaranaUmumController;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\UMKMDesaController;
 use App\Http\Controllers\BeritaDesaController;
-
+use App\Http\Controllers\TentangDesaController;
+use App\Http\Controllers\DashDesaController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -42,7 +43,8 @@ Route::get('/', function () {
 
 Route::get('/umkmdesa',[UMKMDesaController::class,'umkmdesa'])->name('umkmdesa');
 Route::get('/beritadesa',[BeritaDesaController::class,'beritadesa'])->name('beritadesa');
-
+Route::get('/tentangdesa',[TentangDesaController::class,'tentangdesa'])->name('tentangdesa');
+Route::get('/dashdesa',[DashDesaController::class,'dashdesa'])->name('dashdesa');
 
 
 Route::middleware('auth')->group(function () {
