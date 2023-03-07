@@ -86,8 +86,9 @@
                 <div class="header-nav-wrapper navbar-scrolltofixed" style="background-color: #fca311 ;">
                     <div class="container">
                         <nav id="menuzord" class="menuzord default" style="background-color: #fca311 ;">
-                            <ul class="menuzord-menu">
-                                <li style="margin-left: -60px;"><button style="background-color: #fca311 ;border: #fca311; cursor: default;"><img src="https://i.postimg.cc/9fHd9hXG/logodesa.png" style="width: 15%; height: 15%;"></button></li>
+                        <img src="https://i.postimg.cc/1zFpKxGr/Logo-Kabupaten-Malang-removebg-preview.png" style="width: 7%; height: 7%; margin-left:-830px; margin-top:5px; margin-bottom:5px;">
+                        <ul class="menuzord-menu">
+                                <li style="margin-left: -60px;"><button style="background-color: #fca311 ;border: #fca311; cursor: default;"></button></li>
                                 <li><a href="/dashdesa" style="margin-left: 70px;">Beranda</a>
                                     <ul class="">
                                         <ul class="">
@@ -124,14 +125,14 @@
                             <li><a href="/peraturandesa">Peraturan Desa</a></li>
                             <li><a href="#">Potensi Desa</a>
                                 <ul class="dropdown">
-                                    <li><a href="/umkm">UMKM</a></li>
-                                    <li><a href="/pariwisata">Pariwisata</a></li>
+                                    <li><a href="/umkmdesa">UMKM</a></li>
+                                    <li><a href="/pariwisatadesa">Pariwisata</a></li>
                                 </ul>
                             </li>
                             <li><a href="#">Berita</a>
                                 <ul class="dropdown">
-                                    <li><a href="/berita">Berita</a></li>
-                                    <li><a href="/penghargaan">Penghargaan</a></li>
+                                    <li><a href="/beritadesa">Berita</a></li>
+                                    <li><a href="/penghargaandesa">Penghargaan</a></li>
                                     <li><a href="/berita">Galeri</a></li>
                                 </ul>
                             </li>
