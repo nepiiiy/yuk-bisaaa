@@ -6,7 +6,7 @@ use Illuminate\Http\Request;
 
 class GrafikAgamaDesaController extends Controller
 {
-    public function agamadesa(){
+    public function grafikagama(){
         return view('desa/grafikagama');
 
 }

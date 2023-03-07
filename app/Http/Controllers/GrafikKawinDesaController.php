@@ -6,8 +6,8 @@ use Illuminate\Http\Request;
 
 class GrafikKawinDesaController extends Controller
 {
-    public function kawindesa(){
-        return view('desa/grafikperkawin');
+    public function grafikperkawinan(){
+        return view('desa/grafikperkawinan');
 
 }
 }

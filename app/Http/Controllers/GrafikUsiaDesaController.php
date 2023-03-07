@@ -6,7 +6,7 @@ use Illuminate\Http\Request;
 
 class GrafikUsiaDesaController extends Controller
 {
-    public function usiadesa(){
+    public function grafikusia(){
         return view('desa/grafikusia');
 
 }

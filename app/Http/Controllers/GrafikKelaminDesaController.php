@@ -6,7 +6,7 @@ use Illuminate\Http\Request;
 
 class GrafikKelaminDesaController extends Controller
 {
-    public function kelamindesa(){
+    public function grafikkelamin(){
         return view('desa/grafikkelamin');
 
 }

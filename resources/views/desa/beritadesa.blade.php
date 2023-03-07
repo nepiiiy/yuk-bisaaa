@@ -1,5 +1,13 @@
 @extends('desa.nav')
 @section('isi')
+<<<<<<< Updated upstream
+=======
+<<<<<<< HEAD
+<body class="">
+<div id="wrapper" class="clearfix">
+=======
+>>>>>>> fc29c8efd226df5d2315d9749efd0cef6aa2a38b
+>>>>>>> Stashed changes
 <section class="inner-header divider layer-overlay overlay-dark-8" data-bg-img="https://i.postimg.cc/02JFzHcf/ce3a746513e5cfcec3f7fa6e88ef0b391.jpg"">
     <div class="container pt-200 pb-40">
       <!-- Section Content -->

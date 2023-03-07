@@ -6,7 +6,7 @@ use Illuminate\Http\Request;
 
 class KarangTarunaDesaController extends Controller
 {
-    public function ktdesa(){
+    public function karangtaruna(){
         return view('desa/karangtaruna');
 
 }

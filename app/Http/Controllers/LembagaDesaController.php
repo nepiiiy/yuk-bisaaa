@@ -6,7 +6,7 @@ use Illuminate\Http\Request;
 
 class LembagaDesaController extends Controller
 {
-    public function lembagadesa(){
+    public function pemerintahdesa(){
         return view('desa/pemerintahdesa');
 
 }
