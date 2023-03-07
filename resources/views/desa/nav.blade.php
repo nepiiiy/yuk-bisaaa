@@ -87,7 +87,8 @@
                     <div class="container">
                         <nav id="menuzord" class="menuzord default" style="background-color: #fca311 ;">
                             <ul class="menuzord-menu">
-                                <li><a href="/dashdesa">Beranda</a>
+                                <li style="margin-left: -60px;"><button style="background-color: #fca311 ;border: #fca311; cursor: default;"><img src="https://i.postimg.cc/9fHd9hXG/logodesa.png" style="width: 15%; height: 15%;"></button></li>
+                                <li><a href="/dashdesa" style="margin-left: 70px;">Beranda</a>
                                     <ul class="">
                                         <ul class="">
                                         </ul>
@@ -127,9 +128,20 @@
                                     <li><a href="/pariwisata">Pariwisata</a></li>
                                 </ul>
                             </li>
-                            <li><a href="/penghargaan">Penghargaan</a></li>
-                            <li><a href="/berita">Berita</a></li>
+                            <li><a href="#">Berita</a>
+                                <ul class="dropdown">
+                                    <li><a href="/berita">Berita</a></li>
+                                    <li><a href="/penghargaan">Penghargaan</a></li>
+                                    <li><a href="/berita">Galeri</a></li>
+                                </ul>
+                            </li>
                             </ul>
+                            <div class="pull-right flip hidden-sm hidden-xs mt-20 pt-5">
+                                <a class="btn" href="/dashweb" style="background-color:#F26522; color:#fff; border-radius: 10px; margin-left: 90%;"><b>Kembali</b></a>
+                               </div>
+                               <div class="pull-right flip hidden-sm hidden-xs mt-20 pt-5" style="margin-right: -80px;">
+                                <a class="btn" href="admin-desa/dashboard.html" style="background-color:#F26522; color:#fff; border-radius: 10px;"><b>Kelola Desa</b></a>
+                              </div>
                             <div class="pull-right flip hidden-sm hidden-xs mt-20 pt-5" style="margin-right: -0px;">
                             </div>
                         </nav>
