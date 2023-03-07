@@ -17,6 +17,8 @@ use App\Http\Controllers\StrukturKarangController;
 use App\Http\Controllers\StrukturPKKController;
 use App\Http\Controllers\SaranaUmumController;
 use App\Http\Controllers\ProductController;
+use App\Http\Controllers\UMKMDesaController;
+use App\Http\Controllers\BeritaDesaController;
 
 /*
 |--------------------------------------------------------------------------
@@ -36,6 +38,12 @@ Route::get('/', function () {
 // Route::get('/dashboard', function () {
 //     return view('webadmin.dashboard');
 // })->middleware(['auth', 'verified'])->name('dashboard');
+
+
+Route::get('/umkmdesa',[UMKMDesaController::class,'umkmdesa'])->name('umkmdesa');
+Route::get('/beritadesa',[BeritaDesaController::class,'beritadesa'])->name('beritadesa');
+
+
 
 Route::middleware('auth')->group(function () {
 
