@@ -58,18 +58,6 @@
                     <button type="submit" style="font-size: 15px;margin-bottom:7px" class="button-79 ms-0 mb-3">Terima</button>
                     </form>  
                       <a href="#" data-id="{{ $item->id }}" data-nama="{{ $item->name }}" class="delete"><button style="font-size: 15px" class="button-79 ms-0 mb-3" type="submit" role="button">Hapus</button></a>
-                  <td>{{$item->provinsi}}</td>
-                  <td>{{$item->kabupaten}}</td>
-                  <td>{{$item->kecamatan}}</td>
-                  <td>{{$item->kode_pos}}</td>
-                  <td><img style="margin-left:8px ;" class=""  src="{{ asset('storage/' . $item->gambar) }}" width="120px" height="120px" alt=""></td>
-                  <td><img style="margin-left: 0px;"  src="{{ asset('storage/' . $item->logo) }}" width="120px" height="120px" alt=""></td>
-                  <td> <a href="{{ route('user.show', $item->id) }}"><button class="btn btn-primary" style="font-size: 15px;margin-bottom:7px" role="button">Lihat</button></a>
-                    <form action="{{ route('update.status', $item->id) }}" method="post">
-                      @csrf
-                    <button type="submit" style="font-size: 15px;margin-bottom:7px" class="btn btn-primary">Terima</button>
-                    </form>
-                      <a href="#" data-id="{{ $item->id }}" data-nama="{{ $item->name }}" class="delete"><button style="font-size: 15px" class="btn btn-primary" type="submit" role="button">Hapus</button></a>
                 </tr>
               @endforeach
 
