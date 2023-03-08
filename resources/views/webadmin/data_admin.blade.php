@@ -21,23 +21,11 @@
         <div class="card">
 
           <div class="card-body">
-<<<<<<< Updated upstream
             <h5 class="card-title">Terima Pendaftaran</h5> PAGINATE MASIH ERROR 
             <form class="form" method="get" action="{{ route('search1') }}">
               <button type="submit" style="margin-left: 95%; margin-bottom: 7px;">Cari</button>
             <input type="text" class="form-control mb-3" name="search1" id="search1" placeholder="Cari&hellip;">
             </form>
-            
-            
-           
-=======
-            <h5 class="card-title">Terima Pendaftaran</h5>
-            <input type="text" class="form-control mb-3" placeholder="Cari&hellip;">
-
-
-
-
->>>>>>> Stashed changes
             <!-- Primary Color Bordered Table -->
             <table class="table table-bordered border-primary">
               <thead>
@@ -58,7 +46,6 @@
                 <tr>
                   <th scope="row">{{$loop->iteration}}</th>
                   <td>{{$item->name}}</td>
-<<<<<<< Updated upstream
                   <td>{{$item->provinsi}}</td>                       
                   <td>{{$item->kabupaten}}</td>                       
                   <td>{{$item->kecamatan}}</td>                       
@@ -71,7 +58,6 @@
                     <button type="submit" style="font-size: 15px;margin-bottom:7px" class="button-79 ms-0 mb-3">Terima</button>
                     </form>  
                       <a href="#" data-id="{{ $item->id }}" data-nama="{{ $item->name }}" class="delete"><button style="font-size: 15px" class="button-79 ms-0 mb-3" type="submit" role="button">Hapus</button></a>
-=======
                   <td>{{$item->provinsi}}</td>
                   <td>{{$item->kabupaten}}</td>
                   <td>{{$item->kecamatan}}</td>
@@ -84,7 +70,6 @@
                     <button type="submit" style="font-size: 15px;margin-bottom:7px" class="btn btn-primary">Terima</button>
                     </form>
                       <a href="#" data-id="{{ $item->id }}" data-nama="{{ $item->name }}" class="delete"><button style="font-size: 15px" class="btn btn-primary" type="submit" role="button">Hapus</button></a>
->>>>>>> Stashed changes
                 </tr>
               @endforeach
 
@@ -111,19 +96,11 @@
         <div class="card">
 
           <div class="card-body">
-<<<<<<< Updated upstream
             <h5 class="card-title">Edit Admin Desa</h5>  
             <form class="form" method="get" action="{{ route('search2') }}">
               <button type="submit" style="margin-left: 95%; margin-bottom: 7px;">Cari</button>
             <input type="text" class="form-control mb-3" name="search2" id="search1" placeholder="Cari&hellip;">
             </form>
-=======
-            <h5 class="card-title">Edit Admin Desa</h5>
-            <input type="text" class="form-control mb-3" placeholder="Cari&hellip;">
-
-
-
->>>>>>> Stashed changes
 
             <!-- Primary Color Bordered Table -->
             <table class="table table-bordered border-primary">
@@ -138,10 +115,6 @@
                   <th scope="col">Foto Surat</th>
                   <th scope="col">Logo desa</th>
                   <th scope="col">Aksi</th>
-
-
-
-
                 </tr>
               </thead>
               @foreach ($data2 as $item)
@@ -153,23 +126,12 @@
                 <td>{{$item->kecamatan}}</td>
                 <td>{{$item->kode_pos}}</td>
                 <td><img style="margin-left:8px ;" class=""  src="{{ asset('storage/' . $item->gambar) }}" width="120px" height="120px" alt=""></td>
-<<<<<<< Updated upstream
                 <td><img style="margin-left:8px ;" class=""  src="{{ asset('storage/' . $item->logo) }}" width="120px" height="120px" alt=""></td>   
                 <td> <a href="{{ route('user.show', $item->id) }}"><button style="font-size: 15px;" class="button-79 ms-0 mb-3" role="button">Lihat</button></a>
                   <a href="#" data-id="{{ $item->id }}" data-nama="{{ $item->name }}" class="delete"><button style="font-size: 15px" class="button-79 ms-0 mb-3" type="submit" role="button">Hapus</button></a>
-              </td>              
-                
-=======
-                <td><img style="margin-left:8px ;" class=""  src="{{ asset('storage/' . $item->logo) }}" width="120px" height="120px" alt=""></td>
-                <td> <a href="{{ route('user.show', $item->id) }}"><button style="font-size: 15px;" class="btn btn-primary" role="button">Lihat</button></a>
-                  <a href="#" data-id="{{ $item->id }}" data-nama="{{ $item->name }}" class="delete"><button style="font-size: 15px" class="btn btn-primary" type="submit" role="button">Hapus</button></a>
               </td>
-
->>>>>>> Stashed changes
               </tr>
-              <div class="pagination">
-
-</div>
+              <div class="pagination"></div>
             @endforeach
             </table>
             <!-- End Primary Color Bordered Table -->
