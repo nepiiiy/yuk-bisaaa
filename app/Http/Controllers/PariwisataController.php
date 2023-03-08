@@ -12,7 +12,7 @@ class PariwisataController extends Controller
 {
     public function pariwisata()
     {
-        $data = tour::where('user_id',Auth::user()->id)->paginate(2);
+        $data = tour::where('user_id',Auth::user()->id)->paginate(3);
         return view('admindesa.pariwisata', ['data' => $data]);
     }
 
@@ -47,6 +47,8 @@ class PariwisataController extends Controller
             [
                 'judul'     => 'required',
                 'subjudul'  => 'required',
+                'gambar'    => 'required',
+                'gambar'    => 'max:3|min:3'
             ]
         );
         alert()->success('Sukses','Pariwisata berhasil di tambahakan');

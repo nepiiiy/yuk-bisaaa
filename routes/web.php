@@ -91,10 +91,10 @@ Route::middleware('auth')->group(function () {
            Route::get('/deleteadmin/{id}', [DataAdminController::class, 'deleteadmin'])->name('deleteadmin');
            Route::get('/user/{id}', [DataAdminController::class, 'show'])->name('user.show');
            Route::get('/cek', [DataAdminController::class, 'lihat']);
-           
-           
+
+
         });
-        
+
         Route::middleware(['auth:sanctum','verified','admindesa'])->group(function(){
         Route::get('/dashboardadmindesa',[DashboardController::class, 'dashboard'])->name('dashboard');
 

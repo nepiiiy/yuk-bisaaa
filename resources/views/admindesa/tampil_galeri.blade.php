@@ -32,7 +32,7 @@
                         <h5 class="card-title">Edit galeri</h5>
 
                         <!-- Vertical Form -->
-                        <form class="row g-3" action ="/tampilgaleri/{{ $data -> id }}" method="POST">
+                        <form class="row g-3" action ="/tampilgaleri/{{ $data -> id }}" method="POST" enctype="multipart/form-data">
                             @csrf
                             <div class="col-12">
                                 <label for="inputNanme4" class="form-label">Judul</label>

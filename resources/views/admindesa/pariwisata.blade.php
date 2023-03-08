@@ -14,16 +14,15 @@
     </div><!-- End Page Title -->
    <a href="tambah_pariwisata"><button style="margin-left: 69px;margin-bottom: 12px;" type="button" class="btn btn-primary btn-sm  ">Tambah Pariwisata</button></a>
 
-    <section class="section" style="margin-left:70px;">
-      <div class="row align-items-top">
-        <div class="col-lg-11 d-flex flex-row">
+   <section class="section" >
+    <div class="row align-items-top mx-auto">
+      <div class="col-lg-9 d-flex flex-row">
 
 
-            @foreach ($data as $row)
+          @foreach ($data as $row)
 
-          <!-- Card with an image on top -->
-          <div class="card me-5">
-
+        <!-- Card with an image on top -->
+        <div class="card me-2 col-4">
             <div class="card-body">
               <h5 class="card-title">{{ $row->judul }}</h5>
               <p class="card-text">{{ $row->subjudul }}</p>

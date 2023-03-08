@@ -12,7 +12,7 @@ class BeritaController extends Controller
     public function berita()
     {
         $data = desa_new::where('user_id',Auth::user()->id)->paginate(3);
-        
+
         return view('admindesa.berita', ['data' => $data]);
     }
 
@@ -46,6 +46,8 @@ class BeritaController extends Controller
             [
                 'judul'     => 'required',
                 'subjudul'  => 'required',
+                'gambar' => 'required',
+                'gambar' => 'max:3|min:3',
             ]
         );
         alert()->success('Sukses','Berita berhasil di tambahakan');

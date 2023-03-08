@@ -201,7 +201,7 @@
       <ul class="sidebar-nav" id="sidebar-nav">
 
         <li class="nav-item">
-          <a class="nav-link {{ Request::is('dashboardadmindesa') ? '' : 'collapsed' }}" href="dashboardadmindesa">
+          <a class="nav-link {{ Request::is('dashboardadmindesa') ? '' : 'collapsed' }}" href="{{ route('dashboard') }}">
             <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" class="bi bi-grid me-3" viewBox="0 0 16 16">
               <path d="M1 2.5A1.5 1.5 0 0 1 2.5 1h3A1.5 1.5 0 0 1 7 2.5v3A1.5 1.5 0 0 1 5.5 7h-3A1.5 1.5 0 0 1 1 5.5v-3zM2.5 2a.5.5 0 0 0-.5.5v3a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 0-.5-.5h-3zm6.5.5A1.5 1.5 0 0 1 10.5 1h3A1.5 1.5 0 0 1 15 2.5v3A1.5 1.5 0 0 1 13.5 7h-3A1.5 1.5 0 0 1 9 5.5v-3zm1.5-.5a.5.5 0 0 0-.5.5v3a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 0-.5-.5h-3zM1 10.5A1.5 1.5 0 0 1 2.5 9h3A1.5 1.5 0 0 1 7 10.5v3A1.5 1.5 0 0 1 5.5 15h-3A1.5 1.5 0 0 1 1 13.5v-3zm1.5-.5a.5.5 0 0 0-.5.5v3a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 0-.5-.5h-3zm6.5.5A1.5 1.5 0 0 1 10.5 9h3a1.5 1.5 0 0 1 1.5 1.5v3a1.5 1.5 0 0 1-1.5 1.5h-3A1.5 1.5 0 0 1 9 13.5v-3zm1.5-.5a.5.5 0 0 0-.5.5v3a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 0-.5-.5h-3z"/>
             </svg>
@@ -212,7 +212,7 @@
         <li class="nav-heading">EDIT</li>
 
         <li class="nav-item">
-          <a class="nav-link {{ Request::is('profil_desa') ? '' : 'collapsed' }}" href="profil_desa">
+          <a class="nav-link {{ Request::is('profil_desa') ? '' : 'collapsed' }}" href="{{ route('profil_desa') }}">
             <svg console.log(object); xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" class="bi bi-house-door me-2" viewBox="0 0 16 16">
               <path d="M8.354 1.146a.5.5 0 0 0-.708 0l-6 6A.5.5 0 0 0 1.5 7.5v7a.5.5 0 0 0 .5.5h4.5a.5.5 0 0 0 .5-.5v-4h2v4a.5.5 0 0 0 .5.5H14a.5.5 0 0 0 .5-.5v-7a.5.5 0 0 0-.146-.354L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293L8.354 1.146ZM2.5 14V7.707l5.5-5.5 5.5 5.5V14H10v-4a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 0-.5.5v4H2.5Z"/>
             </svg>
@@ -229,17 +229,17 @@
           </a>
           <ul id="components-nav" class="nav-content collapse">
             <li>
-              <a class="nav-link {{ Request::is('struktur_desa') ? '' : 'collapsed' }}   "href="struktur_desa">
+              <a class="nav-link {{ Request::is('struktur_desa') ? '' : 'collapsed' }}   "href="{{ route('struktur_desa') }}">
                 <i class="bi bi-circle"></i><span>Struktur Desa</span>
               </a>
             </li>
             <li>
-              <a class="nav-link {{ Request::is('struktur_karang') ? '' : 'collapsed' }}"href="struktur_karang">
+              <a class="nav-link {{ Request::is('struktur_karang') ? '' : 'collapsed' }}"href="{{ route('struktur_karang') }}">
                 <i class="bi bi-circle"></i><span>Struktur Karang Taruna</span>
               </a>
             </li>
             <li>
-              <a class="nav-link {{ Request::is('struktur_pkk') ? '' : 'collapsed' }}" href="struktur_pkk">
+              <a class="nav-link {{ Request::is('struktur_pkk') ? '' : 'collapsed' }}" href="{{ route('struktur_pkk') }}">
                 <i class="bi bi-circle"></i><span>Struktur PKK</span>
               </a>
             </li>
@@ -248,7 +248,7 @@
         </li><!-- End Components Nav -->
 
         <li class="nav-item">
-          <a class="nav-link {{ Request::is('data_penduduk') ? '' : 'collapsed' }}" href="data_penduduk">
+          <a class="nav-link {{ Request::is('data_penduduk') ? '' : 'collapsed' }}" href="{{ route('data_penduduk') }}">
             <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" class="bi bi-person me-3" viewBox="0 0 16 16">
               <path d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6Zm2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0Zm4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4Zm-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664h10Z"/>
             </svg>
@@ -257,7 +257,7 @@
         </li><!-- End Register Page Nav -->
 
         <li class="nav-item">
-          <a class="nav-link {{ Request::is('peraturan') ? '' : 'collapsed' }}" href="peraturan">
+          <a class="nav-link {{ Request::is('peraturan') ? '' : 'collapsed' }}" href="{{ route('peraturan') }}">
             <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" class="bi bi-card-list me-3" viewBox="0 0 16 16">
               <path d="M14.5 3a.5.5 0 0 1 .5.5v9a.5.5 0 0 1-.5.5h-13a.5.5 0 0 1-.5-.5v-9a.5.5 0 0 1 .5-.5h13zm-13-1A1.5 1.5 0 0 0 0 3.5v9A1.5 1.5 0 0 0 1.5 14h13a1.5 1.5 0 0 0 1.5-1.5v-9A1.5 1.5 0 0 0 14.5 2h-13z"/>
               <path d="M5 8a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7A.5.5 0 0 1 5 8zm0-2.5a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7a.5.5 0 0 1-.5-.5zm0 5a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7a.5.5 0 0 1-.5-.5zm-1-5a.5.5 0 1 1-1 0 .5.5 0 0 1 1 0zM4 8a.5.5 0 1 1-1 0 .5.5 0 0 1 1 0zm0 2.5a.5.5 0 1 1-1 0 .5.5 0 0 1 1 0z"/>
@@ -279,7 +279,7 @@
               </a>
             </li>
             <li>
-              <a href="pariwisata">
+              <a href="{{ route('pariwisata') }}">
                 <i class="bi bi-circle"></i><span>Pariwisata</span>
               </a>
             </li>
@@ -288,7 +288,7 @@
         </li><!-- End Forms Nav -->
 
         <li class="nav-item">
-          <a class="nav-link {{ Request::is('berita') ? '' : 'collapsed' }}" href="berita">
+          <a class="nav-link {{ Request::is('berita') ? '' : 'collapsed' }}" href="{{ route('berita') }}">
             <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" class="bi bi-newspaper me-3" viewBox="0 0 16 16">
               <path d="M0 2.5A1.5 1.5 0 0 1 1.5 1h11A1.5 1.5 0 0 1 14 2.5v10.528c0 .3-.05.654-.238.972h.738a.5.5 0 0 0 .5-.5v-9a.5.5 0 0 1 1 0v9a1.5 1.5 0 0 1-1.5 1.5H1.497A1.497 1.497 0 0 1 0 13.5v-11zM12 14c.37 0 .654-.211.853-.441.092-.106.147-.279.147-.531V2.5a.5.5 0 0 0-.5-.5h-11a.5.5 0 0 0-.5.5v11c0 .278.223.5.497.5H12z"/>
               <path d="M2 3h10v2H2V3zm0 3h4v3H2V6zm0 4h4v1H2v-1zm0 2h4v1H2v-1zm5-6h2v1H7V6zm3 0h2v1h-2V6zM7 8h2v1H7V8zm3 0h2v1h-2V8zm-3 2h2v1H7v-1zm3 0h2v1h-2v-1zm-3 2h2v1H7v-1zm3 0h2v1h-2v-1z"/>
@@ -298,7 +298,7 @@
         </li><!-- End Register Page Nav -->
 
         <li class="nav-item">
-            <a class="nav-link {{ Request::is('penghargaan') ? '' : 'collapsed' }}" href="penghargaan">
+            <a class="nav-link {{ Request::is('penghargaan') ? '' : 'collapsed' }}" href="{{ route('penghargaan') }}">
             <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" class="bi bi-trophy me-3" viewBox="0 0 16 16">
               <path d="M2.5.5A.5.5 0 0 1 3 0h10a.5.5 0 0 1 .5.5c0 .538-.012 1.05-.034 1.536a3 3 0 1 1-1.133 5.89c-.79 1.865-1.878 2.777-2.833 3.011v2.173l1.425.356c.194.048.377.135.537.255L13.3 15.1a.5.5 0 0 1-.3.9H3a.5.5 0 0 1-.3-.9l1.838-1.379c.16-.12.343-.207.537-.255L6.5 13.11v-2.173c-.955-.234-2.043-1.146-2.833-3.012a3 3 0 1 1-1.132-5.89A33.076 33.076 0 0 1 2.5.5zm.099 2.54a2 2 0 0 0 .72 3.935c-.333-1.05-.588-2.346-.72-3.935zm10.083 3.935a2 2 0 0 0 .72-3.935c-.133 1.59-.388 2.885-.72 3.935zM3.504 1c.007.517.026 1.006.056 1.469.13 2.028.457 3.546.87 4.667C5.294 9.48 6.484 10 7 10a.5.5 0 0 1 .5.5v2.61a1 1 0 0 1-.757.97l-1.426.356a.5.5 0 0 0-.179.085L4.5 15h7l-.638-.479a.501.501 0 0 0-.18-.085l-1.425-.356a1 1 0 0 1-.757-.97V10.5A.5.5 0 0 1 9 10c.516 0 1.706-.52 2.57-2.864.413-1.12.74-2.64.87-4.667.03-.463.049-.952.056-1.469H3.504z"/>
             </svg>
@@ -319,7 +319,7 @@
         </li>
 
         <li class="nav-item">
-            <a class="nav-link {{ Request::is('galeri') ? '' : 'collapsed' }}" href="galeri">
+            <a class="nav-link {{ Request::is('galeri') ? '' : 'collapsed' }}" href="{{ route('galeri') }}">
                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-card-image" viewBox="0 0 16 16">
                     <path d="M6.002 5.5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0z"/>
                     <path d="M1.5 2A1.5 1.5 0 0 0 0 3.5v9A1.5 1.5 0 0 0 1.5 14h13a1.5 1.5 0 0 0 1.5-1.5v-9A1.5 1.5 0 0 0 14.5 2h-13zm13 1a.5.5 0 0 1 .5.5v6l-3.775-1.947a.5.5 0 0 0-.577.093l-3.71 3.71-2.66-1.772a.5.5 0 0 0-.63.062L1.002 12v.54A.505.505 0 0 1 1 12.5v-9a.5.5 0 0 1 .5-.5h13z"/>
@@ -336,7 +336,7 @@
     <!-- ======= Footer ======= -->
     <footer id="footer" class="footer">
       <div class="copyright">
-        &copy; Copyright <strong><span>NiceAdmin</span></strong
+        &copy; Copyright <strong><span>Desa Web</span></strong
         >. All Rights Reserved
       </div>
       <div class="credits">
@@ -344,7 +344,7 @@
         <!-- You can delete the links only if you purchased the pro version. -->
         <!-- Licensing information: https://bootstrapmade.com/license/ -->
         <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/nice-admin-bootstrap-admin-html-template/ -->
-        Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+
       </div>
     </footer>
     <!-- End Footer -->
@@ -374,8 +374,8 @@
      @yield('script')
      @yield('editor')
      {{-- jquery cdn sweetalert --}}
- 
-    
+
+
 
   </body>
 </html>

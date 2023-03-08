@@ -12,23 +12,23 @@
         </ol>
       </nav>
     </div><!-- End Page Title -->
-   <a href="tambah_penghargaan"><button style="margin-left: 69px;margin-bottom: 12px;" type="button" class="btn btn-primary btn-sm  ">Tambah Penghargaan      </button></a>
+   <a href="tambah_penghargaan"><button style="margin-left: 50px;margin-bottom: 12px;" type="button" class="btn btn-primary btn-sm  ">Tambah Penghargaan      </button></a>
 
-    <section class="section" style="margin-left:70px;">
-      <div class="row align-items-top">
-        <div class="col-lg-11 d-flex flex-row">
+    <section class="section" >
+      <div class="row align-items-top mx-auto">
+        <div class="col-lg-9 d-flex flex-row">
 
 
             @foreach ($data as $row)
 
           <!-- Card with an image on top -->
-          <div class="card me-5">
+          <div class="card me-2 col-4">
 
             <div class="card-body">
               <h5 class="card-title">{{ $row->judul }}</h5>
               <p class="card-text">{{ $row->subjudul }}</p>
               <div class="d-flex">
-              <a href="/editpeng/{{ $row->id }}" style="margin-left: 50px;" type="button" class="btn btn-primary btn-sm  ">Edit</a>
+              <a href="/editpeng/{{ $row->id }}" style="margin-left: 69px;" type="button" class="btn btn-primary btn-sm  ">Edit</a>
               <a href="#" data-id="{{ $row->id }}" data-nama="{{ $row->judul }}" style="margin-left: 8px;" type="button" class="btn btn-primary btn-sm delete">Hapus</a>
             </div>
             </div>
@@ -38,6 +38,9 @@
                   @endforeach
                               <!-- Card with an image on top -->
 
+        </div>
+        <div class="d-flex justify-content-center">
+            {{ $data->links('pagination::bootstrap-4') }}
         </div>
       </div>
     </section>

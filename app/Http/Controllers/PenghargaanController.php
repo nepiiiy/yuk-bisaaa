@@ -11,7 +11,7 @@ class PenghargaanController extends Controller
 {
     public function penghargaan()
     {
-        $data = desa_award::where('user_id',Auth::user()->id)->paginate(2);
+        $data = desa_award::where('user_id',Auth::user()->id)->paginate(4);
         return view('admindesa.penghargaan', ['data' => $data]);
     }
 
@@ -45,6 +45,7 @@ class PenghargaanController extends Controller
             [
                 'judul'     => 'required',
                 'subjudul'  => 'required',
+                'gambar' => 'min:3|max:3',
             ]
         );
         alert()->success('Sukses','Penghargaan berhasil di tambahakan');

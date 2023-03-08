@@ -44,6 +44,7 @@
                                         <div class="upload__btn-box">
                                             <label class="upload__btn">
                                                 <p class="mb-0">Masukkan Gambar</p>
+                                                <p style="color:red" class="mb-0">(tidak lebih/kurang dari 3)</p>
                                                 <input name="gambar[]" type="file" multiple="" data-max_length="20"
                                                     class="upload__inputfile">
                                             </label>

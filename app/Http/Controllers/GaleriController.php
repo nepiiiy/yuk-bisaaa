@@ -13,8 +13,8 @@ class GaleriController extends Controller
 {
     public function galeri()
     {
-        $data = gallery::where('user_id',Auth::user()->id)->get();
-        
+        $data = gallery::where('user_id',Auth::user()->id)->paginate(3);
+
         return view('admindesa.galeri', ['data' => $data]);
     }
 
@@ -30,7 +30,7 @@ class GaleriController extends Controller
         if ($request->hasfile('gambar')) {
             foreach ($request->gambar as $file) {
                 $name = $file->getClientOriginalName();
-                $file->move(public_path('imggaleri'), $name);
+                $file->move(public_path('imggaleri/'), $name);
                 $files[] = $name;
             }
         }
@@ -77,7 +77,7 @@ class GaleriController extends Controller
             $i = 0;
             foreach ($request->gambar as $file) {
                 $name = $file->getClientOriginalName();
-                $file->move(public_path('/public/imggaleri/'), $name);
+                $file->move(public_path('imggaleri/'), $name);
                 $gambar[$keyarray1[$i]] = $name;
                 $i++;
             }

@@ -31,7 +31,7 @@
                 <div class="card">
                     <div class="card-body">
                         <h5 class="card-title">Edit Berita</h5>
-                        <form class="row g-3" action ="/editpenghargaan/{{ $data -> id }}" method="POST">
+                        <form class="row g-3" action ="/editpenghargaan/{{ $data -> id }}" method="POST" enctype="multipart/form-data">
                             @csrf
                             <!-- Vertical Form -->
                             <form class="row g-3">
