@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\AuthenticatedSessionController;
+use App\Http\Controllers\RegisteredUserController;
 use App\Http\Controllers\DashAdminController;
 use App\Http\Controllers\DataAdminController;
 use App\Http\Controllers\BeritaController;
@@ -17,26 +19,12 @@ use App\Http\Controllers\StrukturKarangController;
 use App\Http\Controllers\StrukturPKKController;
 use App\Http\Controllers\SaranaUmumController;
 use App\Http\Controllers\ProductController;
-
-//desa
 use App\Http\Controllers\UMKMDesaController;
 use App\Http\Controllers\BeritaDesaController;
 use App\Http\Controllers\TentangDesaController;
 use App\Http\Controllers\DashDesaController;
-use App\Http\Controllers\PariwisataDesaController;
-use App\Http\Controllers\PenghargaanDesaController;
-use App\Http\Controllers\LembagaDesaController;
-use App\Http\Controllers\KarangTarunaDesaController;
-use App\Http\Controllers\PKKDesaController;
-use App\Http\Controllers\GrafikUsiaDesaController;
-use App\Http\Controllers\GrafikKelaminDesaController;
-use App\Http\Controllers\GrafikAgamaDesaController;
-use App\Http\Controllers\GrafikPendidikanDesaController;
-use App\Http\Controllers\GrafikKawinDesaController;
-use App\Http\Controllers\SaranaDesaController;
-use App\Http\Controllers\PeraturanDesaController;
-
-
+use App\Http\Controllers\LoginController;
+use App\Http\Controllers\RegisterController;
 
 /*
 |--------------------------------------------------------------------------
@@ -57,6 +45,39 @@ Route::get('/', function () {
 //     return view('webadmin.dashboard');
 // })->middleware(['auth', 'verified'])->name('dashboard');
 
+//login
+Route::get('/masuk',[LoginController::class,'login'])->name('masuk');
+Route::post('/mauk',[LoginController::class,'store'])->name('mauk');
+Route::post('/destroy',[LoginController::class,'destroy'])->name('destroy');
+Route::get('/daftar',[RegisterController::class,'create'])->name('daftar');
+Route::post('/create',[RegisterController::class,'simpan'])->name('create');
+
+
+
+Route::get('/umkmdesa',[UMKMDesaController::class,'umkmdesa'])->name('umkmdesa');
+Route::get('/beritadesa',[BeritaDesaController::class,'beritadesa'])->name('beritadesa');
+Route::get('/tentangdesa',[TentangDesaController::class,'tentangdesa'])->name('tentangdesa');
+Route::get('/dashdesa',[DashDesaController::class,'dashdesa'])->name('dashdesa');
+
+
+Route::middleware(['auth:sanctum','verified','adminweb'])->group(function(){
+
+    Route::get('/dataadmin', [DataAdminController::class, 'DataAdmin']);
+    Route::get('/dataadmin/search1', [DataAdminController::class, 'search1'])->name('search1');
+    Route::get('/dataadmin/search2', [DataAdminController::class, 'search2'])->name('search2');
+    Route::get('/dashwebadmin', [DashAdminController::class, 'dashadmin']);
+    Route::post('/update-status/{id}', [DataAdminController::class, 'updateStatus'])->name('update.status');
+    Route::get('/deleteadmin/{id}', [DataAdminController::class, 'deleteadmin'])->name('deleteadmin');
+    Route::get('/user/{id}', [DataAdminController::class, 'show'])->name('user.show');
+    Route::get('/cek', [DataAdminController::class, 'lihat']);
+    
+    
+ });
+ 
+
+ Route::middleware(['auth:sanctum','verified','admindesa'])->group(function(){
+    Route::get('/dashboardadmindesa',[DashboardController::class, 'dashboard'])->name('dashboard');
+
 //desa
 Route::get('/umkmdesa',[UMKMDesaController::class,'umkmdesa'])->name('umkmdesa');
 Route::get('/beritadesa',[BeritaDesaController::class,'beritadesa'])->name('beritadesa');
@@ -76,6 +97,7 @@ Route::get('/saranaumum',[SaranaDesaController::class,'saranaumum'])->name('sara
 Route::get('/peraturandesa',[PeraturanDesaController::class,'peraturandesa'])->name('peraturandesa');
 
 
+<<<<<<< Updated upstream
 
 
 
@@ -100,6 +122,9 @@ Route::middleware('auth')->group(function () {
 
 
         // berita
+=======
+    // berita
+>>>>>>> Stashed changes
 Route::get('/berita',[BeritaController::class,'berita'])->name('berita');
 Route::get('/tambah_berita',[BeritaController::class,'tambahberita'])->name('tambah_berita');
 Route::post('/uploadberita',[BeritaController::class,'uploadberita'])->name('uploadberita');
@@ -186,11 +211,13 @@ Route::post('/updateprofildesa/{id}',[ProfilDesaController::class, 'updateprofil
 
 
 Route::resource('products', ProductController::class);
-    });
 
-    Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
-    Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
-    Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
+
+
+
+
+
+
 });
 
 require __DIR__.'/auth.php';

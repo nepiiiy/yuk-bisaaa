@@ -2,60 +2,74 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\addres;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
 use App\Models\User;
+use Illuminate\Support\Facades\Storage;
 use Session;
 
 class RegisterController extends Controller
 {
-    public function register()
+    public function create()
     {
-        return view('register');
+        $data = User::all();     
+        $data1 = addres::all();
+        return view('register', ['data' => $data,'data1'=>$data1]);
     }
 
     public function simpan(Request $request)
-{
+    {
+        // dd($request);
+        $this->validate($request,
+            [
+                'name'=>'required',
+                'email'=>'required|unique:users,email',
+                'password'=>'required|min:4',
+                'gambar'=>'required|image|mimes:jpeg,png,jpg,svg',
+                'logo'=>'required|image|mimes:jpeg,jpg,png',
+                'kode_pos'=>'required|min:5|max:8',
+                'koordinat'=>'required'
+            ],[
+                'name.required'=>'Nama harus di isi',
+                'password.required'=>'Password harus di isi',
+                'password.min'=>'Password minimal 4 huruf',
+                'kode_pos.min'=>'Kode pos minimal 5 angka',
+                'kode_pos.max'=>'Kode pos minimal 8 angka',
+                'email.unique'=>'Email ada yang sama',
+                'gambar.mimes'=>'Gambar harus dalam bentuk jpeg,png,jpg,svg',
+                'gambar.image'=>'Yang di inputkan harus gambar',
+                'logo.mimes'=>'Gambar harus dalam bentuk jpeg,png,jpg,svg',
+                'logo.image'=>'Yang di inputkan harus gambar',
+                
+            ]
 
-   $validateData = $request->validate([
+        );
 
-        'name'=>'required|max:200|min:4|unique:users',
-        'email'=>'required|email:dns|unique:users',
-        'password'=>'required|min:4|max:200'
-    ]);
+        // dd('bb');
+        
+        $gambar = Storage::disk('public')->put('gpersetujuan', $request->file('gambar'));
+        $logo = Storage::disk('public')->put('glogo', $request->file('logo'));
 
-    $kredensial=$validateData['password'] = bcrypt($validateData['password']);
-
-//  return $request->all(); 
-User::create($validateData);
-
-return redirect('/login'); 
-}
-
-    public function store(Request $request)
-{
-
-   $validateData = $request->validate([
-
-        'username'=>'required|max:200|min:4|unique:users',
-        'email'=>'required|email:dns|unique:users',
-        'password'=>'required|min:4|max:200',
-        'gambar'=>'required|min:4|max:200',
-        'propinsi'=>'required|min:4|max:200',
-        'kabupaten'=>'required|min:4|max:200',
-        'kecamatan'=>'required|min:4|max:200',
-        'kodepos'=>'required|min:4|max:200',
-        'koordinat'=>'required|min:4|max:200'
-    ]);
-
-    $kredensial=$validateData['password'] = bcrypt($validateData['password']);
-
-//  return $request->all(); 
-User::create($validateData);
-
-return redirect('/'); 
-}
-    
+        $user = User::create([
+            
+        
+            'name' => $request->name,
+            'email' => $request->email,
+            'provinsi' => $request->provinsi,
+            'kabupaten' => $request->kabupaten,
+            'gambar' => $gambar,
+            'logo' => $logo,
+            'kabupaten' => $request->kabupaten,
+            'kecamatan' => $request->kecamatan,
+            'provinsi' => $request->provinsi,
+            'kode_pos' => $request->kode_pos,
+            'koordinat' => $request->koordinat,
+            'password' => Hash::make($request->password),
+            
+        ]);
+        return redirect('masuk')->with('status', 'Tunggu akun anda akan aktif ketika sudah di kirim email');
+    }
     // public function actionregister(Request $request)
     // {
     //     $user = User::create([

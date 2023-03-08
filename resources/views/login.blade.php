@@ -30,6 +30,7 @@
 
             <div class="form-holder">
                 <div class="form-content">
+                    
                     <div class="form-items">
                         @if ($errors->any())
                         <div class="alert alert-danger">
@@ -40,12 +41,17 @@
                             </ul>
                         </div>
                     @endif
+                    @if(session('status'))
+    <div class="alert alert-info">
+        {{ session('status') }}
+    </div>
+@endif
                         <div class="form-items" style="margin-left: 250px;">
 
 
 
 </div>
-            <form action="{{ route('login') }}" method="POST">
+            <form action="{{ route('mauk') }}" method="POST">
             @csrf
                             <div class="row">
                                 <div class="col-12">
@@ -61,7 +67,7 @@
                             </div>
                             <div class="row top-padding">
                                 <div class="col-12 col-sm-6">
-                                    <label for="chk1">Belum punya akun ? <a href="/register" style="text-decoration: none;">Daftar sekarang</a></label>
+                                    <label for="chk1">Belum punya akun ? <a href="/daftar" style="text-decoration: none;">Daftar sekarang</a></label>
                                 </div>
                                 <div class="col-12 col-sm-6">
                                     <div class="form-button text-right">

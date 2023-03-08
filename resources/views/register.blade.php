@@ -30,7 +30,7 @@
                 <div class="form-content">
                     <div class="form-items">
                         <div class="form-items" >
-            <form action="/register" method="post" enctype="multipart/form-data">
+            <form action="/create" method="post" enctype="multipart/form-data">
             @csrf
            
             
@@ -63,17 +63,25 @@
                             <div class="row">
                                 <div class="col-12 col-sm-3">
                                     <select type="text" class="form-control" name="provinsi" placeholder="Provinsi">
-                                        <option selected>Provinsi</option>
+
+                                    @foreach ($data1 as $d)
+                                        <option value="{{ $d->id }}">{{ $d->provinsi }}</option>
+                                    @endforeach
+                                        
                                     </select>
                                 </div>
                                 <div class="col-12 col-sm-3">
                                     <select type="text" class="form-control" placeholder="Kabupaten/Kota">
-                                        <option value="kabupate" selected>Kabupaten/Kota</option>
+                                        @foreach ($data1 as $d)
+                                        <option value="{{ $d->id }}">{{ $d->kabupaten }}</option>
+                                    @endforeach
                                     </select>
                                 </div>
                                 <div class="col-12 col-sm-3">
                                     <select type="text" class="form-control" placeholder="Kecamatan">
-                                        <option selected>Kecamatan</option>
+                                        @foreach ($data1 as $d)
+                                        <option value="{{ $d->id }}">{{ $d->kecamatan }}</option>
+                                    @endforeach
                                     </select>
                                 </div>
                                 <div class="col-12 col-sm-3">

@@ -6,7 +6,6 @@
     <h1>Dashboard</h1>
     <nav class="me-3">
       <ol class="breadcrumb">
-        <li class="breadcrumb-item"><a href="index.html">Home</a></li>
         <li class="breadcrumb-item active">Dashboard</li>
       </ol>
     </nav>
@@ -19,26 +18,6 @@
    
            <!-- satu baris -->
            <div class="udin d-flex flex-row">
-            <!-- Sarana umum -->
-            <div class="col-xxl-1 col-md-4  me-3">
-              <div class="card info-card revenue-card">
-                <div class="card-body">
-                  <h5 class="card-title"></h5>
-  
-                  <div class="d-flex align-items-center">
-                    <div
-                      class="card-icon rounded-circle d-flex align-items-center justify-content-center"
-                    >
-                    <i class="bi bi-collection-fill"></i>
-                    </div>
-                     <div class="ps-3">
-                       <a href="website-profile.html"> <h6>Edit Website</h6> </a>
-                       <h3 style="opacity: 0;">0</h3>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
 
   <!-- Penghargaan -->
   <div class="col-xxl-1 col-md-4 me-3">
@@ -57,7 +36,7 @@
             ></span>
           </div>
            <div class="ps-3">
-             <a href="data-admin.html"> <h6>Panding</h6> </a>
+             <a href="/dataadmin"> <h6>Di Tahan</h6> </a>
              <h3>{{ $jumlah_pending }}</h3>
           </div>
         </div>
@@ -83,7 +62,7 @@
           ></span>
         </div>
         <div class="ps-3">
-          <a href="data-admin.html"> <h6>Jumlah Desa</h6> </a>
+          <a href="/dataadmin"> <h6>Jumlah Desa</h6> </a>
           <h3>{{ $jumlah_data }}</h3>
           </div>
         </div>

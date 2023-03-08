@@ -7,7 +7,7 @@
     <h1>Data Daftar Admin Desa</h1>
     <nav>
       <ol class="breadcrumb">
-        <li class="breadcrumb-item"><a href="/dashwebadmin">Beranda</a></li>
+        <li class="breadcrumb-item"><a href="/dashwebadmin">Dashboard</a></li>
         <li class="breadcrumb-item">Data Admin</li>
       </ol>
     </nav>
@@ -42,7 +42,7 @@
             <table class="table table-bordered border-primary">
               <thead>
                 <tr>
-                  <th scope="col">#</th>
+                  <th scope="col">No.</th>
                   <th scope="col">Nama Desa</th>
                   <th scope="col">Provinsi</th>
                   <th scope="col">Kabupaten</th>
@@ -129,7 +129,7 @@
             <table class="table table-bordered border-primary">
               <thead>
                 <tr>
-                  <th scope="col">#</th>
+                  <th scope="col">No.</th>
                   <th scope="col">Nama Desa</th>
                   <th scope="col">Provinsi</th>
                   <th scope="col">Kabupaten</th>
