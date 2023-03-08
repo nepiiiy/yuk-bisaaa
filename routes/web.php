@@ -122,9 +122,7 @@ Route::middleware('auth')->group(function () {
 
 
         // berita
-=======
-    // berita
->>>>>>> Stashed changes
+
 Route::get('/berita',[BeritaController::class,'berita'])->name('berita');
 Route::get('/tambah_berita',[BeritaController::class,'tambahberita'])->name('tambah_berita');
 Route::post('/uploadberita',[BeritaController::class,'uploadberita'])->name('uploadberita');
