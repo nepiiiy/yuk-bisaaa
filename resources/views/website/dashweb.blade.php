@@ -24,8 +24,145 @@
      <link rel="stylesheet" href="css/css_final.css">
      
      <script src="js/filter.js"></script>
+     <style>
+      button {
+  margin: 5px;
+}
+.custom-btn {
+  width: 100px;
+  height: 25px;
+  color: #fff;
+  border-radius: 5px;
+  padding: 3px;
+  font-family: 'Lato', sans-serif;
+  font-weight: 500;
+  background: transparent;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  display: inline-block;
+   box-shadow:inset 2px 2px 2px 0px rgba(255,255,255,.5),
+   7px 7px 20px 0px rgba(0,0,0,.1),
+   4px 4px 5px 0px rgba(0,0,0,.1);
+  outline: none;
+}
 
-    
+/* 1 */
+.btn-1 {
+  background: rgb(240, 99, 29);
+  background: linear-gradient(0deg, rgba(245, 131, 39, 0.8) 0%, rgba(255, 124, 17, 1) 100%);
+  border: none;
+}
+.btn-1:hover {
+   background: rgb(209, 90, 31);
+background: linear-gradient(0deg, rgba(198, 117, 51, 0.88) 0%, rgba(198, 117, 51, 1) 100%);
+}
+     </style>
+     <style>/* Font */
+@import url('https://fonts.googleapis.com/css?family=Quicksand:400,700');
+
+/* Design */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+
+
+
+.main{
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+
+
+img {
+  height: auto;
+  max-width: 100%;
+  vertical-align: middle;
+}
+
+.btn {
+  color: #ffffff;
+  padding: 0.8rem;
+  font-size: 14px;
+  text-transform: uppercase;
+  border-radius: 4px;
+  font-weight: 400;
+  display: block;
+  width: 100%;
+  cursor: pointer;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  background: transparent;
+}
+
+.btn:hover {
+  background-color: rgba(255, 255, 255, 0.12);
+}
+
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.cards_item {
+  display: flex;
+  padding: 1rem;
+}
+
+@media (min-width: 40rem) {
+  .cards_item {
+    width: 50%;
+  }
+}
+
+@media (min-width: 56rem) {
+  .cards_item {
+    width: 33.3333%;
+  }
+}
+
+.card {
+  background-color: white;
+  border-radius: 0.25rem;
+  box-shadow: 0 20px 40px -14px rgba(0, 0, 0, 0.25);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.card_content {
+  padding: 1rem;
+  background: #fca311 ;
+}
+
+.card_title {
+  color: #ffffff;
+  font-size: 1.1rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: capitalize;
+  margin: 0px;
+}
+
+.card_text {
+  color: #ffffff;
+  font-size: 0.875rem;
+  line-height: 1.5;
+  margin-bottom: 1.25rem;    
+  font-weight: 400;
+}
+.made_by{
+  font-weight: 400;
+  font-size: 13px;
+  margin-top: 35px;
+  text-align: center;
+}</style>
 </head>
 
 <body>
@@ -57,13 +194,13 @@
                           <li > <a href="/dashweb" style="background-color: #F26522; padding: 8px; border-radius: 5px; color: #fff; margin-top: 20px;">Beranda</a>
                           </li>
 
-                          <li> <a href="/about">Tentang</a>
+                          <li> <a href="/about">About</a>
                           </li>
 
-                          <li> <a href="/contact">Kontak</a>
+                          <li> <a href="/contact">Contact</a>
                           </li>
 
-                          <li><a  href="../reg/login.html" style="background-color: #F26522; padding: 8px; border-radius: 5px; color: #fff; margin-top: 20px;">Daftar</a>
+                          <li><a  href="../reg/login.html" style="background-color: #F26522; padding: 8px; border-radius: 5px; color: #fff; margin-top: 20px;">Login</a>
                           </li>
                       </ul>
                   </div>
@@ -88,51 +225,7 @@
                     <br>
                     <br>
                         <div class="dir-search">
-                            <div class="single-query form-group" style="width: 150px; margin-left: 100px; ">
-                                <div class="intro">
-                                    <select >
-                                        <option selected="" value="any" > Provinsi...</option>
-                                        <option>Location - 1</option>
-                                        <option>Location - 2</option>
-                                        <option>Location - 3</option>
-                                        <option>Location - 4</option>
-                                    </select>
-                                </div>
-                            </div>
-                            
-                            <div class="single-query form-group" style="width: 150px; margin-left: 10px;">
-                                <div class="intro">
-                                    <select>
-                                        <option class="active">Kabupaten...</option>
-                                        <option>Resturent</option>
-                                        <option>Real Estate</option>
-                                        <option>Sport</option>
-                                        <option>Beauty & Spa</option>
-                                        <option>Vehicles</option>
-                                        <option>Shoping</option>
-                                        <option>Industry</option>
-                                        <option>Dating</option>
-                                        <option>Jobs</option>
-                                    </select>
-                                </div>
-                            </div>
-                            <div class="single-query form-group" style="width: 150px; margin-left: 10px;">
-                                <div class="intro">
-                                    <select>
-                                        <option class="active">Kecamatan...</option>
-                                        <option>Resturent</option>
-                                        <option>Real Estate</option>
-                                        <option>Sport</option>
-                                        <option>Beauty & Spa</option>
-                                        <option>Vehicles</option>
-                                        <option>Shoping</option>
-                                        <option>Industry</option>
-                                        <option>Dating</option>
-                                        <option>Jobs</option>
-                                    </select>
-                                </div>
-                            </div>
-                            <div class="single-query form-group" style="width: 150px; margin-left: 10px;">
+                            <div class="single-query form-group" style="width: 110%; margin-left: 10px; margin-top:20px">
                               <div class="intro">
                                   <select>
                                       <option class="active">Desa...</option>
@@ -208,36 +301,30 @@
     </div>
    
   </section>
-  <br><br>
-  <center>
-    <h1 style="color: black;"><b>DESA YANG SUDAH <br>TERDAFTAR</b></h1>
-    <br>
+<!-- Banner -->
+<center >
+           <br><br><br><br>        
       <section>
       <div class="">
       <div class="">
       <table id="emp-table" style="color: black;">
           <thead>
               <th col-index = 1>No</th>
-              <th col-index = 2>Provinsi
-                  <select class="table-filter" onchange="filter_rows()" style="color: black;">
-                      <option value="all" ></option>
-                  </select>
+              <th col-index = 2 style="width:200px">Provinsi
+                
               </th>
   
-              <th col-index = 3>Kabupaten
-                  <select class="table-filter" onchange="filter_rows()" style="color: black;">
-                      <option value="all"></option>
-                  </select>
+              <th col-index = 3  style="width:200px">Kabupaten
+                
               </th>
-              <th col-index = 4>Kecamatan
-                  <select class="table-filter" onchange="filter_rows()" style="color: black;">
-                      <option value="all"></option>
-                  </select>
+              <th col-index = 4  style="width:200px">Kecamatan
+                  
               </th>
-              <th col-index = 5>Desa
-                  <select class="table-filter" onchange="filter_rows()" style="color: black;">
-                      <option value="all"></option>
-                  </select>
+              <th col-index = 5  style="width:200px">Desa
+                 
+              </th>
+              <th col-index = 6 >Aksi
+                 
               </th>
               
           </thead>
@@ -248,6 +335,7 @@
                   <td>Mojokerto</td>
                   <td>Gondang</td>
                   <td>Ocelk</td>
+                  <td><button class="custom-btn btn-1" >Kunjungi</button></td>
               </tr>
               <tr>
                   <td>2</td>
@@ -255,24 +343,103 @@
                   <td>TY</td>
                   <td>OPPP</td>
                   <td>YO</td>
+                  <td><button class="custom-btn btn-1">Kunjungi</button></td>
+              </tr>
+              <tr>
+                  <td>1</td>
+                  <td>Jawa Timur</td>
+                  <td>Mojokerto</td>
+                  <td>Gondang</td>
+                  <td>Ocelk</td>
+                  <td><button class="custom-btn btn-1">Kunjungi</button></td>
+              </tr>
+              <tr>
+                  <td>2</td>
+                  <td>Jawa Tengah</td>
+                  <td>TY</td>
+                  <td>OPPP</td>
+                  <td>YO</td>
+                  <td><button class="custom-btn btn-1">Kunjungi</button></td>
+              </tr>
+              <tr>
+                  <td>1</td>
+                  <td>Jawa Timur</td>
+                  <td>Mojokerto</td>
+                  <td>Gondang</td>
+                  <td>Ocelk</td>
+                  <td><button class="custom-btn btn-1">Kunjungi</button></td>
               </tr>
           </tbody>
       </table>
   </section>
 </center>
-      <!-- <script>getUniqueValuesFromColumn()
-      </script> -->
-      <script>
-          
-  
-          getUniqueValuesFromColumn()
-          
-      </script>
-  </div>
-  </div>
+<center> <h1 style="color: black;"><b>DESA TERAKHIR YANG SUDAH TERDAFTAR</b></h1>
+    <br></center>
+    <div class="main">
 
-<!-- Banner -->
-
+  <ul class="cards">
+    <li class="cards_item">
+      <div class="card">
+        <div class="card_image"><img src="https://picsum.photos/500/300/?image=10"></div>
+        <div class="card_content">
+          <h2 class="card_title">Card Grid Layout</h2>
+y
+          <button class="btn card_btn">Read More</button>
+        </div>
+      </div>
+    </li>
+    <li class="cards_item">
+      <div class="card">
+        <div class="card_image"><img src="https://picsum.photos/500/300/?image=5"></div>
+        <div class="card_content">
+          <h2 class="card_title">Card Grid Layout</h2>
+y
+          <button class="btn card_btn">Read More</button>
+        </div>
+      </div>
+    </li>
+    <li class="cards_item">
+      <div class="card">
+        <div class="card_image"><img src="https://picsum.photos/500/300/?image=11"></div>
+        <div class="card_content">
+          <h2 class="card_title">Card Grid Layout</h2>
+y
+          <button class="btn card_btn">Read More</button>
+        </div>
+      </div>
+    </li>
+    <li class="cards_item">
+      <div class="card">
+        <div class="card_image"><img src="https://picsum.photos/500/300/?image=14"></div>
+        <div class="card_content">
+          <h2 class="card_title">Card Grid Layout</h2>
+y
+          <button class="btn card_btn">Read More</button>
+        </div>
+      </div>
+    </li>
+    <li class="cards_item">
+      <div class="card">
+        <div class="card_image"><img src="https://picsum.photos/500/300/?image=17"></div>
+        <div class="card_content">
+          <h2 class="card_title">Card Grid Layout</h2>
+y
+          <button class="btn card_btn">Read More</button>
+        </div>
+      </div>
+    </li>
+    <li class="cards_item">
+      <div class="card">
+        <div class="card_image"><img src="https://picsum.photos/500/300/?image=2"></div>
+        <div class="card_content">
+          <h2 class="card_title">Card Grid Layout</h2>
+y
+          <button class="btn card_btn">Read More</button>
+        </div>
+      </div>
+    </li>
+  </ul>
+</div>
 <!-- Popular Listing -->
 <section id="popular-listing" class="p_b70 p_t70">
   <div class="container">
