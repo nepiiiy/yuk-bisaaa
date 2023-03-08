@@ -37,8 +37,8 @@
                                     <select class="form-select" id="floatingSelect"
                                         aria-label="Floating label select example" name="agama" required>
                                         <option value="Islam">Islam</option>
-                                        <option value="Kristen">Kristen</option>
-                                        <option value="Katolik">Katolik</option>
+                                        <option value="Kristen Protestan">Kristen Protestan</option>
+                                        <option value="Katolik Katolik">Kristen Katolik</option>
                                         <option value="Budha">Budha</option>
                                         <option value="Hindu">Hindu</option>
                                         <option value="Konghucu">Konghucu</option>

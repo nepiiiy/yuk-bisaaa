@@ -21,8 +21,8 @@ class DataAdminController extends Controller
 {  
     public function DataAdmin()
     {
-          $pending = User::where('status', 'pending')->paginate(2);
-        $pending1 = User::where('status', 'aktif')->paginate(2);
+          $pending = User::where('status', 'pending')->paginate(4);
+        $pending1 = User::where('status', 'aktif')->paginate(4);
 
       
         // $table->string('nama');
@@ -158,7 +158,21 @@ public function show($id)
     $user = User::find($id);
     return view('webadmin.lihat_desa',['data'=>$user]);
 }
-
-
+public function search1(Request $request)
+    {
+        $keyword = $request->search1;
+        $data = User::where('name', 'LIKE', '%' . $keyword .'%')->where('status','pending')
+        ->paginate(4);
+        $data2 = User::where('status', 'aktif')->paginate(4);
+        return view('webadmin.data_admin', compact('data', 'data2'));
+    }
+    public function search2(Request $request)
+    {
+        $keyword = $request->search2;
+        $data2 = User::where('name', 'LIKE', '%' . $keyword .'%')->where('status','aktif')
+        ->paginate(4);
+        $data = User::where('status', 'pending')->paginate(4);
+        return view('webadmin.data_admin', compact('data2', 'data'));
+    }
    
 }

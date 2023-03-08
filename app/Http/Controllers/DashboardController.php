@@ -25,6 +25,38 @@ class DashboardController extends Controller
         $jumlah_product = Product::all()->count();
         $jumlah_penduduk = resident::all()->count();
         $jumlah_sarana = public_facility::all()->count();
-        return view('admindesa.dashboard')->with('jumlah_pkk', $jumlah_pkk) ->with ('jumlah_struktur',$jumlah_struktur) ->with ('jumlah_kt', $jumlah_kt) -> with ('jumlah_peraturan',$jumlah_peraturan) ->with ('jumlah_berita', $jumlah_berita) ->with ('jumlah_product', $jumlah_product) -> with('jumlah_penduduk', $jumlah_penduduk) -> with('jumlah_sarana', $jumlah_sarana);
+
+        //grafik jenis kelamin
+        $jk = resident::all()->count();
+        $perempuan = resident::where('jk', 'Perempuan')->count();
+        $laki = resident::where('jk', 'Laki-Laki')->count();
+
+        //grafik agama
+        $agama = resident::all()->count();
+        $islam = resident::where('agama', 'Islam')->count();
+        $kristen = resident::where('agama', 'Kristen Protestan')->count();
+        $katolik = resident::where('agama', 'Kristen Katolik')->count();
+        $hindu = resident::where('agama', 'Hindu')->count();
+        $budha = resident::where('agama', 'Budha')->count();
+        $konghucu = resident::where('agama', 'Konghucu')->count();
+
+        //grafik pendidikan
+        $pendidikan=resident::all()->count();
+        $sd=resident::where('pendidikan', 'SD')->count();
+        $smp=resident::where('pendidikan', 'SMP')->count();
+        $sma=resident::where('pendidikan', 'SMA/SMK')->count();
+        $d3=resident::where('pendidikan', 'D3')->count();
+        $d4=resident::where('pendidikan', 'Sarjana/D4')->count();
+        $s2=resident::where('pendidikan', 'S2')->count();
+
+        //grafik status
+        $status=resident::all()->count();
+        $sudah=resident::where('status', 'Sudah')->count();
+        $belum=resident::where('status', 'Belum')->count();
+
+        //grafik usia
+        $usia=resident::all()->count();
+        // $balita=resident::where('tanggal', '')
+        return view('admindesa.dashboard', compact('jk', 'perempuan', 'laki', 'agama', 'islam', 'kristen', 'katolik', 'hindu', 'budha', 'konghucu', 'pendidikan', 'sd', 'smp', 'sma', 'd3', 'd4', 's2', 'status', 'sudah', 'belum', 'usia'))->with('jumlah_pkk', $jumlah_pkk)->with('jumlah_struktur', $jumlah_struktur)->with('jumlah_kt', $jumlah_kt)->with('jumlah_peraturan', $jumlah_peraturan)->with('jumlah_berita', $jumlah_berita)->with('jumlah_product', $jumlah_product)->with('jumlah_penduduk', $jumlah_penduduk)->with('jumlah_sarana', $jumlah_sarana);
     }
 }

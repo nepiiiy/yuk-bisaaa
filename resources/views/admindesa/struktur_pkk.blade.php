@@ -22,10 +22,11 @@
                     <div class="card">
 
                         <div class="card-body">
+                            <h5 class="card-title">Struktur PKK</h5>
                             <form class="form" method="get" action="{{ route('search') }}">
-                                <h5 class="card-title">Struktur PKK </h5>
-                                <input type="text" class="form-control mb-3" name="search" id="search"
-                                    placeholder="Cari&hellip;">
+                                <button type="submit" style="margin-left: 95%; margin-bottom: 7px;">Cari</button>
+                                    <input type="text" class="form-control mb-3" name="search" id="search"
+                                        placeholder="Cari&hellip;">
                             </form>
                             <td><a href="/tambahpkk"><button class="button-79 ms-0 mb-3" role="button">Tambah
                                         Anggota</button></a></td>

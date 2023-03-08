@@ -84,6 +84,8 @@ Route::middleware('auth')->group(function () {
        Route::middleware(['auth:sanctum','verified','adminweb'])->group(function(){
 
            Route::get('/dataadmin', [DataAdminController::class, 'DataAdmin']);
+           Route::get('/dataadmin/search1', [DataAdminController::class, 'search1'])->name('search1');
+           Route::get('/dataadmin/search2', [DataAdminController::class, 'search2'])->name('search2');
            Route::get('/dashwebadmin', [DashAdminController::class, 'dashadmin']);
            Route::post('/update-status/{id}', [DataAdminController::class, 'updateStatus'])->name('update.status');
            Route::get('/deleteadmin/{id}', [DataAdminController::class, 'deleteadmin'])->name('deleteadmin');
@@ -184,13 +186,6 @@ Route::post('/updateprofildesa/{id}',[ProfilDesaController::class, 'updateprofil
 
 
 Route::resource('products', ProductController::class);
-
-
-
-
-
-
-
     });
 
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');

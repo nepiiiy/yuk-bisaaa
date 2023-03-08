@@ -3,12 +3,12 @@
 <main id="main" class="main">
     
   <div class="pagetitle">
-    <h1>Profile</h1>
+    <h1>Lihat Data</h1>
     <nav>
       <ol class="breadcrumb">
-        <li class="breadcrumb-item"><a href="index.html">Home</a></li>
-        <li class="breadcrumb-item">Users</li>
-        <li class="breadcrumb-item active">Profile</li>
+        <li class="breadcrumb-item"><a href="/dashwebadmin">Beranda</a></li>
+        <li class="breadcrumb-item">Pengguna</li>
+        <li class="breadcrumb-item active">Lihat Data</li>
       </ol>
     </nav>
   </div><!-- End Page Title -->
@@ -68,12 +68,12 @@
 
                 <div class="row">
                   <div class="col-lg-4 col-md-4 label">Gambar Persetujuan Desa</div>
-                  <div class="col-lg-9 col-md-8" style="margin-top: 40px; margin-right: 60px;"><img style="height:450px;width:450px;" src="/img/{{$data->gambar}}" alt=""></div>
+                  <div class="col-lg-9 col-md-8" style="margin-top: 40px; margin-right: 60px;"><img style="height:450px;width:450px;" src="{{ asset('storage/' . $data->gambar) }}" alt=""></div>
                 </div>
 
                 <div class="row">
                   <div class="col-lg-4 col-md-4 label">Logo Desa</div>
-                  <div class="col-lg-9 col-md-8" style="margin-top: 40px; margin-right: 60px;"><img style="height:450px;width:450px;" src="/logo/{{$data->logo}}" alt=""></div>
+                  <div class="col-lg-9 col-md-8" style="margin-top: 40px; margin-right: 60px;"><img style="height:450px;width:450px;" src="{{ asset('storage/' . $data->logo) }}" alt=""></div>
                 </div>
                 <a href="/dataadmin/" style="margin-left: 210px;"><button class="button-79 ms-0 mb-3" role="button">Kembali</button></a>
               </div>

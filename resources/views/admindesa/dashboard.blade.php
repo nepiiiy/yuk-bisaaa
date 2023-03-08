@@ -285,35 +285,41 @@ am4core.useTheme(am4themes_animated);
  */
 var data = [{
   "category": "Jenis Kelamin",
-  "value": 2098,
+  "value": {{$jk}},
   "color": am4core.color("#c00000"),
   "breakdown": [{
     "category": "Perempuan",
-    "value": 1790
+    "value": {{$perempuan}}
   }, {
     "category": "Laki-Laki",
-    "value": 274
+    "value": {{$laki}}
   }]
 }, {
-  "category": "Asesoría individual",
-  "value": 1116,
+  "category": "Agama",
+  "value": {{$agama}},
   "color": am4core.color("#ffc000"),
   "breakdown": [{
-    "category": "Asesoría Innovación",
-    "value": 351
+    "category": "Islam",
+    "value": {{$islam}}
   }, {
-    "category": "Financiero y financiamiento",
-    "value": 45
+    "category": "Kristen Protestan",
+    "value": {{$kristen}}
   }, {
-    "category": "Mercadeo y ventas",
-    "value": 276
+    "category": "Kristen Katolik",
+    "value": {{$katolik}}
   }, {
-    "category": "Estrategia y Administración o empresarial",
-    "value": 308
+    "category": "Hindu",
+    "value": {{$hindu}}
+  },{
+    "category": "Budha",
+    "value": {{$budha}}
+  },{
+    "category": "Konghucu",
+    "value": {{$konghucu}}
   }]
 }, {
   "category": "Grafik Usia",
-  "value": 522,
+  "value": {{$usia}},
   "color": am4core.color("#f8682c"),
   "breakdown": [{
     "category": "Balita (0-5 Tahun)",
@@ -335,44 +341,38 @@ var data = [{
     "value": 11
   }]
 }, {
-  "category": "Evento masivo",
-  "value": 952,
+  "category": "Pendidikan",
+  "value": {{$pendidikan}},
   "color": am4core.color("#91c300"),
   "breakdown": [{
-    "category": "Evento masivo: innovación",
-    "value": 174
+    "category": "SD",
+    "value": {{$sd}}
   }, {
-    "category": "Evento masivo: moda",
-    "value": 153
+    "category": "SMP",
+    "value": {{$smp}}
   }, {
-    "category": "Evento masivo: emprendimiento",
-    "value": 83
+    "category": "SMA/SMK",
+    "value": {{$sma}}
   }, {
-    "category": "Evento masivo: innovación - innovatalks",
-    "value": 80
+    "category": "D3",
+    "value": {{$d3}}
   }, {
-    "category": "Evento masivo: Legal y normativo",
-    "value": 80
+    "category": "D4",
+    "value": {{$d4}}
+  }, {
+    "category": "S2",
+    "value": {{$s2}}
   }]
 },{
-  "category": "Taller",
-  "value": 717,
+  "category": "Status",
+  "value": {{$status}},
   "color": am4core.color("#4472c4"),
   "breakdown": [{
-    "category": "Marketing digital",
-    "value": 57
+    "category": "Sudah Menikah",
+    "value": {{$sudah}}
   }, {
-    "category": "Construye tu prototipo",
-    "value": 36
-  }, {
-    "category": "Redes sociales y aplicaciones en mercadeo",
-    "value": 26
-  }, {
-    "category": "¿Cómo vender por una página web?",
-    "value": 25
-  }, {
-    "category": "Identifica oportunidades de innovación y negocio",
-    "value": 38
+    "category": "Belum Menikah",
+    "value": {{$belum}}
   }]
 }]
 
