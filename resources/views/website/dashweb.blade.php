@@ -224,80 +224,32 @@ img {
                     <br>
                     <br>
                     <br>
+                    <form action="{{Route('dashweb')}}" method="get">
                         <div class="dir-search">
-                            <div class="single-query form-group" style="width: 110%; margin-left: 10px; margin-top:20px">
+                            <div class="single-query form-group" style="width: 110%; margin-left: 10px; margin-top:5px">
                               <div class="intro">
-                                  <select>
-                                      <option class="active">Desa...</option>
-                                      <option>Resturent</option>
-                                      <option>Real Estate</option>
-                                      <option>Sport</option>
-                                      <option>Beauty & Spa</option>
-                                      <option>Vehicles</option>
-                                      <option>Shoping</option>
-                                      <option>Industry</option>
-                                      <option>Dating</option>
-                                      <option>Jobs</option>
+                                  <select name="id">
+                                      <option class="active" value=""></option>
+                                      @foreach ($diti as $item)  
+                                                
+                                      <option value="{{$item->id}}">{{$item->name}}</option>
+                                     
+                                      @endforeach
+                                     
                                   </select>
                               </div>
                           </div>
                         </div>
-                        <div class="search-btn" style="width: 160px; ">
-                            <button><a href="../dashboard-desa.html">Search <i class="fa fa-search" aria-hidden="true" ></i></a>
+                        <div class="search-btn " style="width: 160px; ">
+                            <button type="submit"> <i class="fa fa-search" aria-hidden="true" ></i>
                             </button>
                         </div>
+                      </form>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="search-propertie-filters collapse">
-            <div class="container-2">
-                <div class="row">
-                    <div class="col-md-3 col-sm-3 col-xs-3">
-                        <div class="search-form-group white">
-                            <input type="checkbox" name="check-box" />
-                            <span>Wifi</span> </div>
-                    </div>
-                    <div class="col-md-3 col-sm-3 col-xs-3">
-                        <div class="search-form-group white">
-                            <input type="checkbox" name="check-box" />
-                            <span>Park</span> </div>
-                    </div>
-                    <div class="col-md-3 col-sm-3 col-xs-3">
-                        <div class="search-form-group white">
-                            <input type="checkbox" name="check-box" />
-                            <span>Schools</span> </div>
-                    </div>
-                    <div class="col-md-3 col-sm-3 col-xs-3">
-                        <div class="search-form-group white">
-                            <input type="checkbox" name="check-box" />
-                            <span>Grounds</span> </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-md-3 col-sm-3 col-xs-3">
-                        <div class="search-form-group white">
-                            <input type="checkbox" name="check-box" />
-                            <span>Masque</span> </div>
-                    </div>
-                    <div class="col-md-3 col-sm-3 col-xs-3">
-                        <div class="search-form-group white">
-                            <input type="checkbox" name="check-box" />
-                            <span>Hospitals</span> </div>
-                    </div>
-                    <div class="col-md-3 col-sm-3 col-xs-3">
-                        <div class="search-form-group white">
-                            <input type="checkbox" name="check-box" />
-                            <span>Transport</span> </div>
-                    </div>
-                    <div class="col-md-3 col-sm-3 col-xs-3">
-                        <div class="search-form-group white">
-                            <input type="checkbox" name="check-box" />
-                            <span>Security</span> </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+    
     </div>
    
   </section>
@@ -307,9 +259,12 @@ img {
       <section>
       <div class="">
       <div class="">
+      @if ($data != null)
+            
+        
       <table id="emp-table" style="color: black;">
           <thead>
-              <th col-index = 1>No</th>
+             
               <th col-index = 2 style="width:200px">Provinsi
                 
               </th>
@@ -329,48 +284,19 @@ img {
               
           </thead>
           <tbody>
+
+            
               <tr>
-                  <td>1</td>
-                  <td>Jawa Timur</td>
-                  <td>Mojokerto</td>
-                  <td>Gondang</td>
-                  <td>Ocelk</td>
+                
+                  <td>{{$data->provinsi}}</td>
+                  <td>{{$data->kabupaten}}</td>
+                  <td>{{$data->kecamatan}}</td>
+                  <td>{{$data->name}}</td>
                   <td><button class="custom-btn btn-1" >Kunjungi</button></td>
-              </tr>
-              <tr>
-                  <td>2</td>
-                  <td>Jawa Tengah</td>
-                  <td>TY</td>
-                  <td>OPPP</td>
-                  <td>YO</td>
-                  <td><button class="custom-btn btn-1">Kunjungi</button></td>
-              </tr>
-              <tr>
-                  <td>1</td>
-                  <td>Jawa Timur</td>
-                  <td>Mojokerto</td>
-                  <td>Gondang</td>
-                  <td>Ocelk</td>
-                  <td><button class="custom-btn btn-1">Kunjungi</button></td>
-              </tr>
-              <tr>
-                  <td>2</td>
-                  <td>Jawa Tengah</td>
-                  <td>TY</td>
-                  <td>OPPP</td>
-                  <td>YO</td>
-                  <td><button class="custom-btn btn-1">Kunjungi</button></td>
-              </tr>
-              <tr>
-                  <td>1</td>
-                  <td>Jawa Timur</td>
-                  <td>Mojokerto</td>
-                  <td>Gondang</td>
-                  <td>Ocelk</td>
-                  <td><button class="custom-btn btn-1">Kunjungi</button></td>
-              </tr>
+                </tr>
           </tbody>
       </table>
+      @endif
   </section>
 </center>
 <center> <h1 style="color: black;"><b>DESA TERAKHIR YANG SUDAH TERDAFTAR</b></h1>

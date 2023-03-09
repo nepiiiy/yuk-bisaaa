@@ -23,17 +23,6 @@ class DataAdminController extends Controller
     {
           $pending = User::where('status', 'pending')->paginate(4);
         $pending1 = User::where('status', 'aktif')->paginate(4);
-
-      
-        // $table->string('nama');
-        // $table->string('jk');
-        // $table->string('agama');
-        // $table->date('tanggal');
-        // $table->string('alamat');
-        // $table->string('pendidikan');
-        // $table->string('status');
-
-
         
         return view ('webadmin.data_admin',['data'=>$pending,'data2'=>$pending1 ]);
 
@@ -44,6 +33,8 @@ class DataAdminController extends Controller
         $data = User::Find($id)->delete();
         return redirect('dataadmin');
     }
+
+
 
     public function updateStatus($id)
 {

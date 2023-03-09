@@ -175,10 +175,10 @@
               </li>
 
               <li>
-                <form method="POST" action="{{ route('logout') }}">
+                <form method="POST" action="{{ route('destroy') }}">
                   @csrf
 
-                  <x-dropdown-link :href="route('logout')"
+                  <x-dropdown-link :href="route('destroy')"
                           onclick="event.preventDefault();
                                       this.closest('form').submit();">
                       {{ __('Keluar') }}
