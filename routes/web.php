@@ -25,6 +25,9 @@ use App\Http\Controllers\TentangDesaController;
 use App\Http\Controllers\DashDesaController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\RegisterController;
+use App\Http\Controllers\DashWebController;
+use App\Http\Controllers\ContactController;
+use App\Http\Controllers\AboutController;
 
 /*
 |--------------------------------------------------------------------------
@@ -58,7 +61,9 @@ Route::get('/grafikpendidikan',[GrafikPendidikanDesaController::class,'grafikpen
 Route::get('/grafikperkawinan',[GrafikKawinDesaController::class,'grafikperkawinan'])->name('grafikperkawinan');
 Route::get('/saranaumum',[SaranaDesaController::class,'saranaumum'])->name('saranaumum');
 Route::get('/peraturandesa',[PeraturanDesaController::class,'peraturandesa'])->name('peraturandesa');
-
+Route::get('/dashweb',[DashWebController::class,'dashweb'])->name('dashweb');
+Route::get('/contact',[ContactController::class,'contact'])->name('contact');
+Route::get('/about',[AboutController::class,'about'])->name('about');
 
 
 // Route::get('/dashboard', function () {
