@@ -9,4 +9,6 @@ class resident extends Model
 {
     use HasFactory;
     protected $guarded = [];
+
+    
 }

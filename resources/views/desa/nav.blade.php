@@ -64,8 +64,8 @@
     <!--[if lt IE 9]>
   <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
   <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-  
-  
+
+
 <![endif]-->
 
 </head>
@@ -89,7 +89,7 @@
                         <img src="https://i.postimg.cc/1zFpKxGr/Logo-Kabupaten-Malang-removebg-preview.png" style="width: 7%; height: 7%; margin-left:-830px; margin-top:5px; margin-bottom:5px;">
                         <ul class="menuzord-menu">
                                 <li style="margin-left: -60px;"><button style="background-color: #fca311 ;border: #fca311; cursor: default;"></button></li>
-                                <li><a href="/dashdesa" style="margin-left: 70px;">Beranda</a>
+                                <li><a href="{{ route('dashdesa') }}" style="margin-left: 70px;">Beranda</a>
                                     <ul class="">
                                         <ul class="">
                                         </ul>
@@ -98,42 +98,42 @@
                             </li>
                             <li class="active"><a href="#">Profil Desa</a>
                                 <ul class="dropdown">
-                                    <li><a href="/tentangdesa">Tentang Desa</a></li>
-                                    <li><a href="/pemerintahdesa">Struktur Pemerintah Desa</a></li>
+                                    <li><a href="{{ route('tentangdesa') }}">Tentang Desa</a></li>
+                                    <li><a href="{{ route('pemerintahdesa') }}">Struktur Pemerintah Desa</a></li>
                                 </ul>
                             </li>
                             <li><a href="#">Organisasi</a>
                                 <ul class="dropdown">
-                                    <li><a href="/karangtaruna">Karang Taruna</a></li>
+                                    <li><a href="{{ route('karangtaruna') }}">Karang Taruna</a></li>
                                     <li><a href="/pkk">PKK</a></li>
                                 </ul>
                             <li><a href="#">Data</a>
                                 <ul class="dropdown">
                                     <li><a href="#">Dinamika Penduduk</a>
                                         <ul class="dropdown">
-                                            <li><a href="/grafikusia">Grafik Usia & Yang Masih Hidup </a></li>
-                                            <li><a href="/grafikkelamin">Grafik Jenis Kelamin</a></li>
-                                            <li><a href="/grafikagama">Grafik Agama</a></li>
-                                            <li><a href="/grafikpendidikan">Grafik Pendidikan Terakhir</a></li>
-                                            <li><a href="/grafikperkawinan">Grafik Perkawinan</a></li>
+                                            <li><a href="{{ route('grafikusia') }}">Grafik Usia & Yang Masih Hidup </a></li>
+                                            <li><a href="{{ route('grafikkelamin') }}">Grafik Jenis Kelamin</a></li>
+                                            <li><a href="{{ route('grafikagama') }}">Grafik Agama</a></li>
+                                            <li><a href="{{ route('grafikpendidikan') }}">Grafik Pendidikan Terakhir</a></li>
+                                            <li><a href="{{ route('grafikperkawinan') }}">Grafik Perkawinan</a></li>
                                         </ul>
                                     </li>
-                                    <li><a href="/saranaumum">Sarana Umum</a>
+                                    <li><a href="{{ route('saranaumum') }}">Sarana Umum</a>
                                     </li>
                                 </ul>
                             </li>
-                            <li><a href="/peraturandesa">Peraturan Desa</a></li>
+                            <li><a href="{{ route('peraturandesa') }}">Peraturan Desa</a></li>
                             <li><a href="#">Potensi Desa</a>
                                 <ul class="dropdown">
-                                    <li><a href="/umkmdesa">UMKM</a></li>
-                                    <li><a href="/pariwisatadesa">Pariwisata</a></li>
+                                    <li><a href="{{ route('umkmdesa') }}">UMKM</a></li>
+                                    <li><a href="{{ route('pariwisatadesa') }}">Pariwisata</a></li>
                                 </ul>
                             </li>
                             <li><a href="#">Berita</a>
                                 <ul class="dropdown">
-                                    <li><a href="/beritadesa">Berita</a></li>
-                                    <li><a href="/penghargaandesa">Penghargaan</a></li>
-                                    <li><a href="/berita">Galeri</a></li>
+                                    <li><a href="{{ route('beritadesa') }}">Berita</a></li>
+                                    <li><a href="{{ route('penghargaandesa') }}">Penghargaan</a></li>
+                                    <li><a href="{{ route('galeridesa') }}">Galeri</a></li>
                                 </ul>
                             </li>
                             </ul>
@@ -141,7 +141,7 @@
                                 <a class="btn" href="/dashweb" style="background-color:#F26522; color:#fff; border-radius: 10px; margin-left: 90%;"><b>Kembali</b></a>
                                </div>
                                <div class="pull-right flip hidden-sm hidden-xs mt-20 pt-5" style="margin-right: -80px;">
-                                <a class="btn" href="admin-desa/dashboard.html" style="background-color:#F26522; color:#fff; border-radius: 10px;"><b>Kelola Desa</b></a>
+                                <a class="btn" href="{{ route('profil_desa') }}" style="background-color:#F26522; color:#fff; border-radius: 10px;"><b>Kelola Desa</b></a>
                               </div>
                             <div class="pull-right flip hidden-sm hidden-xs mt-20 pt-5" style="margin-right: -0px;">
                             </div>
@@ -153,8 +153,8 @@
 
     @yield('isi')
 
-    <footer id="footer" class="footer divider">
-        <div class="footer-top layer-overlay overlay-dark-8">
+    <footer  id="footer" class="footer divider">
+        <div  class="footer-top layer-overlay overlay-dark-8">
             <div class="container pt-60 pb-30">
                 <div class="row">
                     <div class="col-md-12">

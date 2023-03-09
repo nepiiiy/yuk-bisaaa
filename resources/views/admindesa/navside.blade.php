@@ -185,6 +185,10 @@
                   </x-dropdown-link>
               </form>
               </li>
+              <li>
+                <a class="nav-link {{ Request::is('dashdesa') ? '' : 'collapsed' }}" href="{{ route('dashdesa') }}">
+                    <span>kembali                   </span>
+              </li>
             </ul>
             <!-- End Profile Dropdown Items -->
           </li>

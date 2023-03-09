@@ -12,9 +12,17 @@ use App\Models\Product;
 use App\Models\resident;
 use App\Models\public_facility;
 use Illuminate\Http\Request;
+use Carbon\Carbon;
+use Illuminate\Support\Facades\DB;
 
 class DashboardController extends Controller
 {
+
+    public function getAge(){
+        $umur=Carbon::parse($this->tanggal);
+        $today=Carbon::today();
+        return $umur->diffInYears($today);
+    }
     public function dashboard()
     {
         $jumlah_pkk = pkk_structure::all()->count();
@@ -41,22 +49,48 @@ class DashboardController extends Controller
         $konghucu = resident::where('agama', 'Konghucu')->count();
 
         //grafik pendidikan
-        $pendidikan=resident::all()->count();
-        $sd=resident::where('pendidikan', 'SD')->count();
-        $smp=resident::where('pendidikan', 'SMP')->count();
-        $sma=resident::where('pendidikan', 'SMA/SMK')->count();
-        $d3=resident::where('pendidikan', 'D3')->count();
-        $d4=resident::where('pendidikan', 'Sarjana/D4')->count();
-        $s2=resident::where('pendidikan', 'S2')->count();
+        $pendidikan = resident::all()->count();
+        $sd = resident::where('pendidikan', 'SD')->count();
+        $smp = resident::where('pendidikan', 'SMP')->count();
+        $sma = resident::where('pendidikan', 'SMA/SMK')->count();
+        $d3 = resident::where('pendidikan', 'D3')->count();
+        $d4 = resident::where('pendidikan', 'Sarjana/D4')->count();
+        $s2 = resident::where('pendidikan', 'S2')->count();
 
         //grafik status
-        $status=resident::all()->count();
-        $sudah=resident::where('status', 'Sudah')->count();
-        $belum=resident::where('status', 'Belum')->count();
+        $status = resident::all()->count();
+        $sudah = resident::where('status', 'Sudah')->count();
+        $belum = resident::where('status', 'Belum')->count();
 
         //grafik usia
         $usia=resident::all()->count();
-        // $balita=resident::where('tanggal', '')
-        return view('admindesa.dashboard', compact('jk', 'perempuan', 'laki', 'agama', 'islam', 'kristen', 'katolik', 'hindu', 'budha', 'konghucu', 'pendidikan', 'sd', 'smp', 'sma', 'd3', 'd4', 's2', 'status', 'sudah', 'belum', 'usia'))->with('jumlah_pkk', $jumlah_pkk)->with('jumlah_struktur', $jumlah_struktur)->with('jumlah_kt', $jumlah_kt)->with('jumlah_peraturan', $jumlah_peraturan)->with('jumlah_berita', $jumlah_berita)->with('jumlah_product', $jumlah_product)->with('jumlah_penduduk', $jumlah_penduduk)->with('jumlah_sarana', $jumlah_sarana);
+        //balita
+        $limitDate = Carbon::now()->subYears(0 < 5);
+        $balita = resident::where('tanggal', '<=', $limitDate)
+            ->get()->count();
+
+        //anak-anak
+        $ank = Carbon::now()->subYears(0 >= 5 && 6 < 15);
+        $anak = resident::where('tanggal', '<=', $ank)
+            ->get()->count();
+
+        //remaja
+        $rem = Carbon::now()->subYears(6 >= 15 && 16 < 25);
+        $remaja = resident::where('tanggal', '<=', $rem)
+            ->get()->count();
+            
+
+        //dewasa
+        $dew = Carbon::now()->subYears(16 >= 25 && 26 < 45);
+        $dewasa = resident::where('tanggal', '<=', $dew)
+            ->get()->count();
+
+        //lansia
+        $lan = Carbon::now()->subYears(26 >= 45 && 45 < 100);
+        $lansia = resident::where('tanggal', '<=', $lan)
+            ->get()->count();
+        
+        return view('admindesa.dashboard', compact('jk', 'perempuan', 'laki', 'agama', 'islam', 'kristen', 'katolik', 'hindu', 'budha', 'konghucu', 'pendidikan', 'sd', 'smp', 'sma', 'd3', 'd4', 's2', 'status', 'sudah', 'belum', 'usia', 'balita', 'anak', 'remaja', 'dewasa', 'lansia'))
+        ->with('jumlah_pkk', $jumlah_pkk)->with('jumlah_struktur', $jumlah_struktur)->with('jumlah_kt', $jumlah_kt)->with('jumlah_peraturan', $jumlah_peraturan)->with('jumlah_berita', $jumlah_berita)->with('jumlah_product', $jumlah_product)->with('jumlah_penduduk', $jumlah_penduduk)->with('jumlah_sarana', $jumlah_sarana);
     }
 }

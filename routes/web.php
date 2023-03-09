@@ -23,6 +23,8 @@ use App\Http\Controllers\UMKMDesaController;
 use App\Http\Controllers\BeritaDesaController;
 use App\Http\Controllers\TentangDesaController;
 use App\Http\Controllers\DashDesaController;
+use App\Http\Controllers\GaleriDesaController;
+use App\Http\Controllers\KarangTarunaDesaController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\DashWebController;
@@ -88,6 +90,29 @@ Route::get('/beritadesa',[BeritaDesaController::class,'beritadesa'])->name('beri
 Route::get('/tentangdesa',[TentangDesaController::class,'tentangdesa'])->name('tentangdesa');
 Route::get('/dashdesa',[DashDesaController::class,'dashdesa'])->name('dashdesa');
 
+<<<<<<< Updated upstream
+=======
+//desa
+Route::get('/umkmdesa',[UMKMDesaController::class,'umkmdesa'])->name('umkmdesa');
+Route::get('/beritadesa',[BeritaDesaController::class,'beritadesa'])->name('beritadesa');
+Route::get('/tentangdesa',[TentangDesaController::class,'tentangdesa'])->name('tentangdesa');
+Route::get('/dashdesa',[DashDesaController::class,'dashdesa'])->name('dashdesa');
+Route::get('/pariwisatadesa',[PariwisataDesaController::class,'pariwisatadesa'])->name('pariwisatadesa');
+Route::get('/penghargaandesa',[PenghargaanDesaController::class,'penghargaandesa'])->name('penghargaandesa');
+Route::get('/pemerintahdesa',[LembagaDesaController::class,'pemerintahdesa'])->name('pemerintahdesa');
+Route::get('/karangtaruna',[KarangTarunaDesaController::class,'karangtaruna'])->name('karangtaruna');
+Route::get('/pkk',[PKKDesaController::class,'pkk'])->name('pkk');
+Route::get('/grafikusia',[GrafikUsiaDesaController::class,'grafikusia'])->name('grafikusia');
+Route::get('/grafikkelamin',[GrafikKelaminDesaController::class,'grafikkelamin'])->name('grafikkelamin');
+Route::get('/grafikagama',[GrafikAgamaDesaController::class,'grafikagama'])->name('grafikagama');
+Route::get('/grafikpendidikan',[GrafikPendidikanDesaController::class,'grafikpendidikan'])->name('grafikpendidikan');
+Route::get('/grafikperkawinan',[GrafikKawinDesaController::class,'grafikperkawinan'])->name('grafikperkawinan');
+Route::get('/saranaumum',[SaranaDesaController::class,'saranaumum'])->name('saranaumum');
+Route::get('/peraturandesa',[PeraturanDesaController::class,'peraturandesa'])->name('peraturandesa');
+Route::get('/galeridesa',[GaleriDesaController::class,'galeridesa'])->name('galeridesa');
+Route::get('/galeridesa2',[GaleriDesaController::class,'galeridesa2'])->name('galeridesa2');
+
+>>>>>>> Stashed changes
 
 Route::middleware(['auth:sanctum','verified','adminweb'])->group(function(){
 
@@ -99,14 +124,51 @@ Route::middleware(['auth:sanctum','verified','adminweb'])->group(function(){
     Route::get('/deleteadmin/{id}', [DataAdminController::class, 'deleteadmin'])->name('deleteadmin');
     Route::get('/user/{id}', [DataAdminController::class, 'show'])->name('user.show');
     Route::get('/cek', [DataAdminController::class, 'lihat']);
+<<<<<<< Updated upstream
     
     
  });
  
+=======
+
+
+ });
+
+>>>>>>> Stashed changes
 
  Route::middleware(['auth:sanctum','verified','admindesa'])->group(function(){
     Route::get('/dashboardadmindesa',[DashboardController::class, 'dashboard'])->name('dashboard');
 
+<<<<<<< Updated upstream
+<<<<<<< Updated upstream
+=======
+
+Route::middleware('auth')->group(function () {
+
+       Route::middleware(['auth:sanctum','verified','adminweb'])->group(function(){
+
+           Route::get('/dataadmin', [DataAdminController::class, 'DataAdmin']);
+           Route::get('/dataadmin/search1', [DataAdminController::class, 'search1'])->name('search1');
+           Route::get('/dataadmin/search2', [DataAdminController::class, 'search2'])->name('search2');
+           Route::get('/dashwebadmin', [DashAdminController::class, 'dashadmin']);
+           Route::post('/update-status/{id}', [DataAdminController::class, 'updateStatus'])->name('update.status');
+           Route::get('/deleteadmin/{id}', [DataAdminController::class, 'deleteadmin'])->name('deleteadmin');
+           Route::get('/user/{id}', [DataAdminController::class, 'show'])->name('user.show');
+           Route::get('/cek', [DataAdminController::class, 'lihat']);
+
+
+        });
+
+        Route::middleware(['auth:sanctum','verified','admindesa'])->group(function(){
+        Route::get('/dashboardadmindesa',[DashboardController::class, 'dashboard'])->name('dashboard');
+
+
+        // berita
+>>>>>>> Stashed changes
+=======
+
+
+>>>>>>> Stashed changes
 
 
 Route::get('/berita',[BeritaController::class,'berita'])->name('berita');

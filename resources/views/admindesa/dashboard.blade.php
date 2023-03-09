@@ -318,27 +318,24 @@ var data = [{
     "value": {{$konghucu}}
   }]
 }, {
-  "category": "Grafik Usia",
+  "category": "Usia",
   "value": {{$usia}},
   "color": am4core.color("#f8682c"),
   "breakdown": [{
     "category": "Balita (0-5 Tahun)",
-    "value": 9
+    "value": {{$balita}}
   }, {
-    "category": "Anak - Anak (5-11 Tahun)",
-    "value": 10
+    "category": "Anak - Anak (6-15 Tahun)",
+    "value": {{$anak}}
   }, {
-    "category": "Remaja (17-25 Tahun)",
-    "value": 19
+    "category": "Remaja (16-25 Tahun)",
+    "value": {{$remaja}}
   }, {
-    "category": "Dewasa (17-45 Tahun)",
-    "value": 8
+    "category": "Dewasa (26-45 Tahun)",
+    "value": {{$dewasa}}
   }, {
-    "category": "Lansia (46-65 Tahun)",
-    "value": 8
-  }, {
-    "category": "Lansia (46-65 Tahun)",
-    "value": 11
+    "category": "Lansia (46-100 Tahun)",
+    "value": {{$lansia}}
   }]
 }, {
   "category": "Pendidikan",
