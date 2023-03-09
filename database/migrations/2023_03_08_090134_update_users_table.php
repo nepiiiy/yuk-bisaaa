@@ -19,11 +19,7 @@ return new class extends Migration
             ->on('desa_profiles')
             ->cascadeOnDelete();
 
-            $table->foreignId('nama_desa_id')->nullable();
-            $table->foreign('nama_desa_id')
-            ->references('id')
-            ->on('kecamatans')
-            ->cascadeOnDelete();
+         
             
         });
     }

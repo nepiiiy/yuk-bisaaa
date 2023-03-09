@@ -57,39 +57,39 @@
                             </div>
                             <div class="row">
                                 <div class="col-12">
-                                    <input type="password" class="form-control" name="password" placeholder="Password">
+                                    <input type="password"  class="form-control @error('password') is-invalid @enderror " name="password" placeholder="Password">
                                 </div>
                             </div>
                             <div class="row">
                                 <div class="col-12 col-sm-3">
-                                    <input type="text" name="provinsi">
+                                    <input type="text" class="form-control @error('provinsi') is-invalid @enderror" placeholder="Provinsi" name="provinsi">
                                 </div>
                                 <div class="col-12 col-sm-3">
-                                    <input type="text" name="kabupaten ">
+                                    <input type="text" class="form-control @error('kabupaten') is-invalid @enderror" placeholder="Kabupaten" name="kabupaten">
                                 </div>
                                 <div class="col-12 col-sm-3">
-                                    <input type="text" name="kecamatan">
+                                    <input type="text" class="form-control @error('kecamatan') is-invalid @enderror" placeholder="provinsi" name="kecamatan">
                                 </div>
                                 <div class="col-12 col-sm-3">
-                                    <input type="text" class="form-control" name="kode_pos" placeholder="Kode Pos">
+                                    <input type="text" class="form-control @error('kode_pos') is-invalid @enderror" name="kode_pos" placeholder="Kode Pos">
                                 </div>
                             </div>
                         
                             <div class="row">
                                 <div class="col-12">
-                                    <input type="text" class="form-control" name="koordinat" placeholder="Titik Koordinat">
+                                    <input type="text" class="form-control @error('koordinat') is-invalid @enderror" name="koordinat" placeholder="Titik Koordinat">
                                 </div>
                             </div>
                             <div class="row">
                                 <div class="col-12 ">
-                                    <div class="custom-file">
+                                    <div class="custom-file @error('gambar') is-invalid @enderror">
                                         <label  >Unggah Persetujuan</label>
                                         <input type="file" class="" style="margin-bottom: 7px" name="gambar" >
                                     </div>
                                 </div>
                                 
                                 <div class="col-12 ">
-                                    <div class="custom-file">
+                                    <div class="custom-file @error('logo') is-invalid @enderror">
                                         <label  style="margin-top: 20px">Unggah logo</label>
                                         <input type="file" class="" style="" name="logo" >
                                     </div>

@@ -13,9 +13,8 @@ class RegisterController extends Controller
 {
     public function create()
     {
-        $data = User::all();     
-        $data1 = addres::all();
-        return view('register', ['data' => $data,'data1'=>$data1]);
+             
+        return view('register');
     }
 
     public function simpan(Request $request)
@@ -29,6 +28,9 @@ class RegisterController extends Controller
                 'gambar'=>'required|image|mimes:jpeg,png,jpg,svg',
                 'logo'=>'required|image|mimes:jpeg,jpg,png',
                 'kode_pos'=>'required|min:5|max:8',
+                'kecamatan'=>'required',
+                'kabupaten'=>'required',
+                'provinsi'=>'required',
                 'koordinat'=>'required'
             ],[
                 'name.required'=>'Nama harus di isi',

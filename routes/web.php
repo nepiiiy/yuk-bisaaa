@@ -40,7 +40,7 @@ use App\Http\Controllers\AboutController;
 |
 */
 
-Route::get('/', function () {
+Route::get('/ads', function () {
     return view('welcome');
 });
 
