@@ -46,7 +46,8 @@
             <td>{{ $product->name }}</td>
             <td>{{ $product->detail }}</td>
             <td>
-                <form action="{{ route('products.destroy',$product->id) }}" method="POST">
+                
+            <form action="{{ route('products.destroy',$product->id) }}" method="POST">
 
     
                     <a class="btn btn-primary" href="{{ route('products.edit',$product->id) }}"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-pen-fill" viewBox="0 0 16 16">
@@ -69,3 +70,4 @@
 </section>
 </main>
 @endsection
+

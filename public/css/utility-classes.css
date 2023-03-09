@@ -680,7 +680,7 @@ footer.bg-deep {
   background-position: left top;
 }
 .img-fullwidth {
-  width: 100% !important;
+  width: 300pc !important;
 }
 /* -------- Absolute Image Positioning ---------- */
 .overflow-visible {

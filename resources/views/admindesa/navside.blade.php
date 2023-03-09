@@ -185,6 +185,10 @@
                   </x-dropdown-link>
               </form>
               </li>
+              <li>
+                <a class="nav-link {{ Request::is('dashdesa') ? '' : 'collapsed' }}" href="{{ route('dashdesa') }}">
+                    <span>kembali                   </span>
+              </li>
             </ul>
             <!-- End Profile Dropdown Items -->
           </li>
@@ -274,7 +278,7 @@
           </a>
           <ul id="forms-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
             <li>
-              <a href="products">
+              <a href="{{ route('products.index') }}">
                 <i class="bi bi-circle"></i><span>UMKM</span>
               </a>
             </li>

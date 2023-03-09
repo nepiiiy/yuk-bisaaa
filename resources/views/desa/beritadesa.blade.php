@@ -1,18 +1,14 @@
 @extends('desa.nav')
 @section('isi')
-<<<<<<< Updated upstream
-=======
-<<<<<<< HEAD
+
 <body class="">
 <div id="wrapper" class="clearfix">
-=======
->>>>>>> fc29c8efd226df5d2315d9749efd0cef6aa2a38b
->>>>>>> Stashed changes
+
 <section class="inner-header divider layer-overlay overlay-dark-8" data-bg-img="https://i.postimg.cc/02JFzHcf/ce3a746513e5cfcec3f7fa6e88ef0b391.jpg"">
     <div class="container pt-200 pb-40">
       <!-- Section Content -->
       <div class="section-content">
-        <div class="row"> 
+        <div class="row">
           <div class="col-md-6">
             <h3 class="text-white font-36">Berita</h3>
             <h1 class="text-white font-45">Nama Desa</h1>
@@ -25,7 +21,7 @@
       </div>
     </div>
   </section>
-  
+
       <!-- Section: Causes -->
     <div>
     <section id="about">
@@ -38,7 +34,7 @@
               </div>
               <div class="causes-details border-1px bg-white clearfix p-20 pt-10 pb-20">
                 <h4 class="text-uppercase"><a href="lihatberita.html">Judul Berita</a></h4>
-                
+
                 <p class="mt-20" style="text-align: justify;">Camat Lebong Saktu Sabirin S.Sos meminta seluruh pemerintah desa dalam wilayahnya untuk menyiapkan anggaran untuk patok atau batas desa,
 
 dari Dana Desa (DD) yang bertujuan untuk memberikan kejelasan tentang batas desa di masing-masing wilayah. </p>
@@ -53,7 +49,7 @@ dari Dana Desa (DD) yang bertujuan untuk memberikan kejelasan tentang batas desa
               </div>
               <div class="causes-details border-1px bg-white clearfix p-20 pt-10 pb-20">
                 <h4 class="text-uppercase"><a href="lihatberita.html">Judul Berita</a></h4>
-                
+
                 <p class="mt-20" style="text-align: justify;">Camat Lebong Saktu Sabirin S.Sos meminta seluruh pemerintah desa dalam wilayahnya untuk menyiapkan anggaran untuk patok atau batas desa,
 
 dari Dana Desa (DD) yang bertujuan untuk memberikan kejelasan tentang batas desa di masing-masing wilayah. </p>
@@ -68,7 +64,7 @@ dari Dana Desa (DD) yang bertujuan untuk memberikan kejelasan tentang batas desa
               </div>
               <div class="causes-details border-1px bg-white clearfix p-20 pt-10 pb-20">
                 <h4 class="text-uppercase"><a href="lihatberita.html">Judul Berita</a></h4>
-     
+
                 <p class="mt-20" style="text-align: justify;">Camat Lebong Saktu Sabirin S.Sos meminta seluruh pemerintah desa dalam wilayahnya untuk menyiapkan anggaran untuk patok atau batas desa,
 
 dari Dana Desa (DD) yang bertujuan untuk memberikan kejelasan tentang batas desa di masing-masing wilayah. </p>
@@ -83,7 +79,7 @@ dari Dana Desa (DD) yang bertujuan untuk memberikan kejelasan tentang batas desa
               </div>
               <div class="causes-details border-1px bg-white clearfix p-20 pt-10 pb-20">
                 <h4 class="text-uppercase"><a href="lihatberita.html">Judul Berita</a></h4>
-                
+
                 <p class="mt-20" style="text-align: justify;">Camat Lebong Saktu Sabirin S.Sos meminta seluruh pemerintah desa dalam wilayahnya untuk menyiapkan anggaran untuk patok atau batas desa,
 
 dari Dana Desa (DD) yang bertujuan untuk memberikan kejelasan tentang batas desa di masing-masing wilayah. </p>
@@ -93,14 +89,14 @@ dari Dana Desa (DD) yang bertujuan untuk memberikan kejelasan tentang batas desa
           </div>
         </div>
       </div>
-    
-    
 
 
-    
+
+
+
       <div class="container pb-40">
         <div class="section-title text-center">
-          
+
         <div class="row multi-row-clearfix">
           <div class="col-sm-6 col-md-3">
             <div class="causes bg-silver-light maxwidth500 mb-30">
@@ -109,7 +105,7 @@ dari Dana Desa (DD) yang bertujuan untuk memberikan kejelasan tentang batas desa
               </div>
               <div class="causes-details border-1px bg-white clearfix p-20 pt-10 pb-20">
                 <h4 class="text-uppercase"><a href="lihatberita.html">Judul Berita</a></h4>
-                
+
                 <p class="mt-20" style="text-align: justify;">Camat Lebong Saktu Sabirin S.Sos meminta seluruh pemerintah desa dalam wilayahnya untuk menyiapkan anggaran untuk patok atau batas desa,
 
 dari Dana Desa (DD) yang bertujuan untuk memberikan kejelasan tentang batas desa di masing-masing wilayah. </p>
@@ -124,7 +120,7 @@ dari Dana Desa (DD) yang bertujuan untuk memberikan kejelasan tentang batas desa
               </div>
               <div class="causes-details border-1px bg-white clearfix p-20 pt-10 pb-20">
                 <h4 class="text-uppercase"><a href="lihatberita.html">Judul Berita</a></h4>
-                
+
                 <p class="mt-20" style="text-align: justify;">Camat Lebong Saktu Sabirin S.Sos meminta seluruh pemerintah desa dalam wilayahnya untuk menyiapkan anggaran untuk patok atau batas desa,
 
 dari Dana Desa (DD) yang bertujuan untuk memberikan kejelasan tentang batas desa di masing-masing wilayah. </p>
@@ -139,7 +135,7 @@ dari Dana Desa (DD) yang bertujuan untuk memberikan kejelasan tentang batas desa
               </div>
               <div class="causes-details border-1px bg-white clearfix p-20 pt-10 pb-20">
                 <h4 class="text-uppercase"><a href="lihatberita.html">Judul Berita</a></h4>
-     
+
                 <p class="mt-20" style="text-align: justify;">Camat Lebong Saktu Sabirin S.Sos meminta seluruh pemerintah desa dalam wilayahnya untuk menyiapkan anggaran untuk patok atau batas desa,
 
 dari Dana Desa (DD) yang bertujuan untuk memberikan kejelasan tentang batas desa di masing-masing wilayah. </p>
@@ -154,7 +150,7 @@ dari Dana Desa (DD) yang bertujuan untuk memberikan kejelasan tentang batas desa
               </div>
               <div class="causes-details border-1px bg-white clearfix p-20 pt-10 pb-20">
                 <h4 class="text-uppercase"><a href="lihatberita.html">Judul Berita</a></h4>
-                
+
                 <p class="mt-20" style="text-align: justify;">Camat Lebong Saktu Sabirin S.Sos meminta seluruh pemerintah desa dalam wilayahnya untuk menyiapkan anggaran untuk patok atau batas desa,
 
 dari Dana Desa (DD) yang bertujuan untuk memberikan kejelasan tentang batas desa di masing-masing wilayah. </p>
