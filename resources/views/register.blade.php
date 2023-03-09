@@ -62,27 +62,13 @@
                             </div>
                             <div class="row">
                                 <div class="col-12 col-sm-3">
-                                    <select type="text" class="form-control" name="provinsi" placeholder="Provinsi">
-
-                                    @foreach ($data1 as $d)
-                                        <option value="{{ $d->id }}">{{ $d->provinsi }}</option>
-                                    @endforeach
-                                        
-                                    </select>
+                                    <input type="text" name="provinsi">
                                 </div>
                                 <div class="col-12 col-sm-3">
-                                    <select type="text" class="form-control" placeholder="Kabupaten/Kota">
-                                        @foreach ($data1 as $d)
-                                        <option value="{{ $d->id }}">{{ $d->kabupaten }}</option>
-                                    @endforeach
-                                    </select>
+                                    <input type="text" name="kabupaten ">
                                 </div>
                                 <div class="col-12 col-sm-3">
-                                    <select type="text" class="form-control" placeholder="Kecamatan">
-                                        @foreach ($data1 as $d)
-                                        <option value="{{ $d->id }}">{{ $d->kecamatan }}</option>
-                                    @endforeach
-                                    </select>
+                                    <input type="text" name="kecamatan">
                                 </div>
                                 <div class="col-12 col-sm-3">
                                     <input type="text" class="form-control" name="kode_pos" placeholder="Kode Pos">

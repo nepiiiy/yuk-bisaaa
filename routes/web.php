@@ -41,6 +41,25 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+//desa
+Route::get('/umkmdesa',[UMKMDesaController::class,'umkmdesa'])->name('umkmdesa');
+Route::get('/beritadesa',[BeritaDesaController::class,'beritadesa'])->name('beritadesa');
+Route::get('/tentangdesa',[TentangDesaController::class,'tentangdesa'])->name('tentangdesa');
+Route::get('/dashdesa',[DashDesaController::class,'dashdesa'])->name('dashdesa');
+Route::get('/pariwisatadesa',[PariwisataDesaController::class,'pariwisatadesa'])->name('pariwisatadesa');
+Route::get('/penghargaandesa',[PenghargaanDesaController::class,'penghargaandesa'])->name('penghargaandesa');
+Route::get('/pemerintahdesa',[LembagaDesaController::class,'pemerintahdesa'])->name('pemerintahdesa');
+Route::get('/karangtaruna',[KarangTarunaDesaController::class,'karangtaruna'])->name('karangtaruna');
+Route::get('/pkk',[PKKDesaController::class,'pkk'])->name('pkk');
+Route::get('/grafikusia',[GrafikUsiaDesaController::class,'grafikusia'])->name('grafikusia');
+Route::get('/grafikkelamin',[GrafikKelaminDesaController::class,'grafikkelamin'])->name('grafikkelamin');
+Route::get('/grafikagama',[GrafikAgamaDesaController::class,'grafikagama'])->name('grafikagama');
+Route::get('/grafikpendidikan',[GrafikPendidikanDesaController::class,'grafikpendidikan'])->name('grafikpendidikan');
+Route::get('/grafikperkawinan',[GrafikKawinDesaController::class,'grafikperkawinan'])->name('grafikperkawinan');
+Route::get('/saranaumum',[SaranaDesaController::class,'saranaumum'])->name('saranaumum');
+Route::get('/peraturandesa',[PeraturanDesaController::class,'peraturandesa'])->name('peraturandesa');
+
+
 // Route::get('/dashboard', function () {
 //     return view('webadmin.dashboard');
 // })->middleware(['auth', 'verified'])->name('dashboard');
@@ -77,24 +96,6 @@ Route::middleware(['auth:sanctum','verified','adminweb'])->group(function(){
 
  Route::middleware(['auth:sanctum','verified','admindesa'])->group(function(){
     Route::get('/dashboardadmindesa',[DashboardController::class, 'dashboard'])->name('dashboard');
-
-//desa
-Route::get('/umkmdesa',[UMKMDesaController::class,'umkmdesa'])->name('umkmdesa');
-Route::get('/beritadesa',[BeritaDesaController::class,'beritadesa'])->name('beritadesa');
-Route::get('/tentangdesa',[TentangDesaController::class,'tentangdesa'])->name('tentangdesa');
-Route::get('/dashdesa',[DashDesaController::class,'dashdesa'])->name('dashdesa');
-Route::get('/pariwisatadesa',[PariwisataDesaController::class,'pariwisatadesa'])->name('pariwisatadesa');
-Route::get('/penghargaandesa',[PenghargaanDesaController::class,'penghargaandesa'])->name('penghargaandesa');
-Route::get('/pemerintahdesa',[LembagaDesaController::class,'pemerintahdesa'])->name('pemerintahdesa');
-Route::get('/karangtaruna',[KarangTarunaDesaController::class,'karangtaruna'])->name('karangtaruna');
-Route::get('/pkk',[PKKDesaController::class,'pkk'])->name('pkk');
-Route::get('/grafikusia',[GrafikUsiaDesaController::class,'grafikusia'])->name('grafikusia');
-Route::get('/grafikkelamin',[GrafikKelaminDesaController::class,'grafikkelamin'])->name('grafikkelamin');
-Route::get('/grafikagama',[GrafikAgamaDesaController::class,'grafikagama'])->name('grafikagama');
-Route::get('/grafikpendidikan',[GrafikPendidikanDesaController::class,'grafikpendidikan'])->name('grafikpendidikan');
-Route::get('/grafikperkawinan',[GrafikKawinDesaController::class,'grafikperkawinan'])->name('grafikperkawinan');
-Route::get('/saranaumum',[SaranaDesaController::class,'saranaumum'])->name('saranaumum');
-Route::get('/peraturandesa',[PeraturanDesaController::class,'peraturandesa'])->name('peraturandesa');
 
 
 
@@ -184,12 +185,6 @@ Route::post('/updateprofildesa/{id}',[ProfilDesaController::class, 'updateprofil
 
 
 Route::resource('products', ProductController::class);
-
-
-
-
-
-
 
 });
 

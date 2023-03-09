@@ -19,16 +19,12 @@ return new class extends Migration
             ->on('desa_profiles')
             ->cascadeOnDelete();
 
-            $table->foreignId('addres_id')->nullable();
-            $table->foreign('addres_id')
+            $table->foreignId('nama_desa_id')->nullable();
+            $table->foreign('nama_desa_id')
             ->references('id')
-            ->on('addres')
+            ->on('kecamatans')
             ->cascadeOnDelete();
             
-           
-        
-        
-           
         });
     }
 

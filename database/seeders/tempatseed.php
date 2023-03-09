@@ -3,6 +3,9 @@
 namespace Database\Seeders;
 
 use App\Models\addres;
+use App\Models\kabupaten;
+use App\Models\kecamatan;
+use App\Models\provinsi;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 
@@ -14,27 +17,26 @@ class tempatseed extends Seeder
     public function run(): void
     {
 
-        addres::create([
-            'kecamatan'=>'Karang Ploso',
-            'kecamatan'=>'Kepanjen',
-            'kabupaten'=>'Malang',
+        provinsi::create([
             'Provinsi'=>'Jawa Timur',
         ]);
         
+        
+        kabupaten::create([
+            'kabupaten'=>'malang',
+        ]);
 
-        addres::create([
+        kecamatan::create([
             'kecamatan'=>'Karang Ploso',
         ]);
 
-        addres::create([
-            'kecamatan'=>'Pagak',
+        kecamatan::create([
+            'kecamatan'=>'Kepanjen',
         ]);
 
 
-        addres::create([
-            'kabupaten'=>'trenggalek',
-            'kecamatan'=>'ngantang',
-        ]);
+
+      
 
     }
 }

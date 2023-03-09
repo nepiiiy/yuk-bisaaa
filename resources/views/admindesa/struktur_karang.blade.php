@@ -100,6 +100,8 @@
                     buttons: true,
                     dangerMode: true,
                 })
+
+                
                 .then((willDelete) => {
                     if (willDelete) {
                         window.location = "/deletekt/" + ktid + ""

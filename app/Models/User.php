@@ -15,11 +15,9 @@ class User extends Authenticatable
 
     protected $guarded = [];
     // protected $filleble = ['gambar','logo'];
-    public function jabatans(){
-        return $this -> belongsTo(addres::class, 'provinsi','id');
-        return $this -> belongsTo(addres::class, 'kabupaten','id');
-        return $this -> belongsTo(addres::class, 'kecamatan','id');
-        
+    public function kabupaten()
+    {
+        return $this->belongsTo(kecamatan::class);
     }
 
 }
