@@ -43,8 +43,13 @@ use App\Http\Controllers\AboutController;
 Route::get('/ads', function () {
     return view('welcome');
 });
-
 //desa
+Route::get('/dashweb',[DashWebController::class,'dashweb'])->name('dashweb');
+// Route::get('/dashweb/search', [DashWebController::class, 'searchh'])->name('cari_desa');
+
+
+
+
 Route::get('/umkmdesa',[UMKMDesaController::class,'umkmdesa'])->name('umkmdesa');
 Route::get('/beritadesa',[BeritaDesaController::class,'beritadesa'])->name('beritadesa');
 Route::get('/tentangdesa',[TentangDesaController::class,'tentangdesa'])->name('tentangdesa');
@@ -61,7 +66,6 @@ Route::get('/grafikpendidikan',[GrafikPendidikanDesaController::class,'grafikpen
 Route::get('/grafikperkawinan',[GrafikKawinDesaController::class,'grafikperkawinan'])->name('grafikperkawinan');
 Route::get('/saranaumum',[SaranaDesaController::class,'saranaumum'])->name('saranaumum');
 Route::get('/peraturandesa',[PeraturanDesaController::class,'peraturandesa'])->name('peraturandesa');
-Route::get('/dashweb',[DashWebController::class,'dashweb'])->name('dashweb');
 Route::get('/contact',[ContactController::class,'contact'])->name('contact');
 Route::get('/about',[AboutController::class,'about'])->name('about');
 
@@ -194,4 +198,4 @@ Route::resource('products', ProductController::class);
 
 });
 
-require __DIR__.'/auth.php';
+
