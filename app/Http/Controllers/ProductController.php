@@ -4,7 +4,6 @@ namespace App\Http\Controllers;
 
 use App\Models\Product;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Auth;
 
 class ProductController extends Controller
 {
@@ -15,7 +14,7 @@ class ProductController extends Controller
      */
     public function index()
     {
-        $products = Product::where('user_id',Auth::user()->id)->paginate(5);
+        $products = Product::latest()->paginate(5);
   
         return view('products.index',compact('products'))
             ->with('i', (request()->input('page', 1) - 1) * 5);
@@ -44,10 +43,8 @@ class ProductController extends Controller
             'detail' => 'required',
             'image' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
         ]);
-        
 
         $input = $request->all();
-        
 
         if ($image = $request->file('image')) {
             $destinationPath = 'image/';
@@ -55,9 +52,9 @@ class ProductController extends Controller
             $image->move($destinationPath, $profileImage);
             $input['image'] = "$profileImage";
         }
-        $data = Product::create($input);
-        $data->user_id = Auth::user()->id;
-        $data->save();
+  
+        Product::create($input);
+   
         return redirect()->route('products.index')
                         ->with('success','Product created successfully.');
     }

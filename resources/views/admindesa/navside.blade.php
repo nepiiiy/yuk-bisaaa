@@ -274,7 +274,7 @@
           </a>
           <ul id="forms-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
             <li>
-              <a href="products">
+              <a href="{{ route('products.index') }}">
                 <i class="bi bi-circle"></i><span>UMKM</span>
               </a>
             </li>
