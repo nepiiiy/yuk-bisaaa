@@ -1,4 +1,4 @@
-@font-face {
+    @font-face {
 	font-family: 'ElegantIcons';
 	src:url('../fonts/ElegantIcons.eot');
 	src:url('../fonts/ElegantIconsd41d.eot?#iefix') format('embedded-opentype'),
@@ -1156,4 +1156,4 @@ text-shadow: none;
 		font-size: 2em;
 	}
 
-	
+

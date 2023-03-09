@@ -32,34 +32,19 @@
                     <div class="event-list bg-silver-light maxwidth500 mb-30">
                       <div class="thumb">
                         <img src="imggaleri/contoh1.png" alt="" class="img-fullwidth">
-                        <div class="entry-date media-left text-center flip bg-theme-colored pt-5 pr-15 pb-5 pl-15">
-                          <ul>
-                            <li class="font-16 text-white font-weight-600 border-bottom">28</li>
-                            <li class="font-12 text-white text-uppercase">Feb</li>
-                          </ul>
-                        </div>
                       </div>
                       <div class="image-box-details text-center p-20 pt-30 pb-30 bg-lighter">
-                        <h3 class="title mt-0">The World is Beautiful</h3>
-                      <a href="galeridesa2" class="btn btn-colored btn-theme-colored">Read More</a>
+                        <a data-lightbox="image" href="imggaleri/contoh1.png" class="btn btn-colored btn-theme-colored">Lihat Gambar</a>
                       </div>
                     </div>
                   </div>
               <div class="col-sm-6 col-md-4">
                 <div class="event-list bg-silver-light maxwidth500 mb-30">
                   <div class="thumb">
-                    <img src="imggaleri/contoh1.png" alt="" class="img-fullwidth">
-                    <div class="entry-date media-left text-center flip bg-theme-colored pt-5 pr-15 pb-5 pl-15">
-                      <ul>
-                        <li class="font-16 text-white font-weight-600 border-bottom">28</li>
-                        <li class="font-12 text-white text-uppercase">Feb</li>
-                      </ul>
-                    </div>
+                    <img src="imggaleri/desa13.jpeg" alt="" class="img-fullwidth">
                   </div>
                   <div class="image-box-details text-center p-20 pt-30 pb-30 bg-lighter">
-                    <h3 class="title mt-0">The World is Beautiful</h3>
-
-                    <a href="galeridesa2" class="btn btn-colored btn-theme-colored">Read More</a>
+                    <a data-lightbox="image" href="imggaleri/contoh1.png" class="btn btn-colored btn-theme-colored">Lihat Gambar</a>
                   </div>
                 </div>
               </div>
@@ -68,16 +53,10 @@
                 <div class="event-list bg-silver-light maxwidth500 mb-30">
                   <div class="thumb">
                     <img src="imggaleri/contoh1.png" alt="" class="img-fullwidth">
-                    <div class="entry-date media-left text-center flip bg-theme-colored pt-5 pr-15 pb-5 pl-15">
-                      <ul>
-                        <li class="font-16 text-white font-weight-600 border-bottom">28</li>
-                        <li class="font-12 text-white text-uppercase">Feb</li>
-                      </ul>
-                    </div>
+
                   </div>
                   <div class="image-box-details text-center p-20 pt-30 pb-30 bg-lighter">
-                    <h3 class="title mt-0">The World is Beautiful</h3>
-                    <a href="galeridesa2" class="btn btn-colored btn-theme-colored">Read More</a>
+                    <a data-lightbox="image" href="imggaleri/contoh1.png" class="btn btn-colored btn-theme-colored">Lihat Gambar</a>
                   </div>
                 </div>
               </div>
