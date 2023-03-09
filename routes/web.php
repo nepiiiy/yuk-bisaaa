@@ -136,6 +136,31 @@ Route::middleware(['auth:sanctum','verified','adminweb'])->group(function(){
     Route::get('/dashboardadmindesa',[DashboardController::class, 'dashboard'])->name('dashboard');
 
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
+=======
+
+Route::middleware('auth')->group(function () {
+
+       Route::middleware(['auth:sanctum','verified','adminweb'])->group(function(){
+
+           Route::get('/dataadmin', [DataAdminController::class, 'DataAdmin']);
+           Route::get('/dataadmin/search1', [DataAdminController::class, 'search1'])->name('search1');
+           Route::get('/dataadmin/search2', [DataAdminController::class, 'search2'])->name('search2');
+           Route::get('/dashwebadmin', [DashAdminController::class, 'dashadmin']);
+           Route::post('/update-status/{id}', [DataAdminController::class, 'updateStatus'])->name('update.status');
+           Route::get('/deleteadmin/{id}', [DataAdminController::class, 'deleteadmin'])->name('deleteadmin');
+           Route::get('/user/{id}', [DataAdminController::class, 'show'])->name('user.show');
+           Route::get('/cek', [DataAdminController::class, 'lihat']);
+
+
+        });
+
+        Route::middleware(['auth:sanctum','verified','admindesa'])->group(function(){
+        Route::get('/dashboardadmindesa',[DashboardController::class, 'dashboard'])->name('dashboard');
+
+
+        // berita
+>>>>>>> Stashed changes
 =======
 
 
