@@ -60,6 +60,7 @@ Route::get('/saranaumum',[SaranaDesaController::class,'saranaumum'])->name('sara
 Route::get('/peraturandesa',[PeraturanDesaController::class,'peraturandesa'])->name('peraturandesa');
 
 
+
 // Route::get('/dashboard', function () {
 //     return view('webadmin.dashboard');
 // })->middleware(['auth', 'verified'])->name('dashboard');
